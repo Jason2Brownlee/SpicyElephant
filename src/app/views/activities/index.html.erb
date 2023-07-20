@@ -1,0 +1,30 @@
+<% if @user.nil? %>
+	<% title "activity stream" %>
+	<h3><span>Activity Stream</span></h3>
+	<p>
+		<%= link_to "Back Home", root_path %>
+	</p>
+<% else %>
+	<% title "#{@user.humanized_name}'s activity stream" %>
+	<h3><span><%= @user.humanized_name %>'s Activity Stream</span></h3>
+	<p>
+		<%= link_to "View #{@user.humanized_name}'s profile", profile_user_path(@user) %>
+	</p>
+<% end%>
+
+
+<br/>
+<hr>
+	<div clas="page_info">
+		<%= page_entries_info @activities %>
+	</div>
+<hr>
+
+<%= render :partial => @activities %>
+
+<br/>
+<div class="apple_pagination">
+	<%= will_paginate @activities, :container => false %>
+</div>
+
+

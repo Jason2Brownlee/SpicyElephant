@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/!svn/ver/4/trunk/vendor/plugins/hobofields/lib/hobo_fields
+END
+field_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/4/trunk/vendor/plugins/hobofields/lib/hobo_fields/field_spec.rb
+END
+migration_generator.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/4/trunk/vendor/plugins/hobofields/lib/hobo_fields/migration_generator.rb
+END
+model_extensions.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/4/trunk/vendor/plugins/hobofields/lib/hobo_fields/model_extensions.rb
+END
+text.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/4/trunk/vendor/plugins/hobofields/lib/hobo_fields/text.rb
+END
+textile_string.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/4/trunk/vendor/plugins/hobofields/lib/hobo_fields/textile_string.rb
+END
+markdown_string.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/4/trunk/vendor/plugins/hobofields/lib/hobo_fields/markdown_string.rb
+END
+password_string.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/4/trunk/vendor/plugins/hobofields/lib/hobo_fields/password_string.rb
+END
+enum_string.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/4/trunk/vendor/plugins/hobofields/lib/hobo_fields/enum_string.rb
+END
+field_declaration_dsl.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/4/trunk/vendor/plugins/hobofields/lib/hobo_fields/field_declaration_dsl.rb
+END
+html_string.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/4/trunk/vendor/plugins/hobofields/lib/hobo_fields/html_string.rb
+END
+fields_declaration.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/4/trunk/vendor/plugins/hobofields/lib/hobo_fields/fields_declaration.rb
+END
+email_address.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/4/trunk/vendor/plugins/hobofields/lib/hobo_fields/email_address.rb
+END

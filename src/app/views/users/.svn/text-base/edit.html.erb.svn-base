@@ -1,0 +1,39 @@
+<% title 'Edit My Account' %>
+<h3><span>Edit My Account</span></h3>
+<%= render :partial => "common/uni_form_includes" %>
+
+<%= error_messages_for :user %>
+  
+<% form_for :user, :url => user_url(current_user), :html => { :method => :put, :class => "uniForm" } do |f| %>
+
+<fieldset class="inlineLabels">
+			
+	<div class="ctrlHolder">
+	  <p class="label">Email Notification:</p>
+	  	<label for="notification_enabled" class="inlineLabel">
+			<%= f.radio_button :notification_enabled, "false" %> Disabled
+		</label>
+	  	<label for="notification_enabled" class="inlineLabel">
+			<%= f.radio_button :notification_enabled, "true"  %> Weekly
+		</label>
+		<p class="formHint">
+			<small style="font-size:10px;">
+			Weekly email notifications will be sent if your training schedule requires attention.
+			</small>
+		</p>
+	</div>
+	
+	<div class="ctrlHolder">
+		<label for="time_zone">Time Zone:</label>
+		<%= f.time_zone_select :time_zone, TimeZone.us_zones %>
+		<p class="formHint">
+			<small style="font-size:10px;">
+			Please select a time zone that most suites where you are in the world.
+			</small>
+		</p>
+	</div>
+</fieldset>
+
+<%= submit_tag 'Update' %> or <%= link_to 'Cancel', current_user %>
+<% end %>
+

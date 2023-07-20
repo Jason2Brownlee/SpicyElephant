@@ -1,0 +1,11 @@
+
+/* TinyMCE specific rules */
+body.mceContentBody {
+   background: #FFF;
+   text-align:center;
+   font-size:100%;
+}
+
+mceContentBody a {
+   color: red !important; /* FF requires a important here */
+}

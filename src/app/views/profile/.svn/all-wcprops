@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/!svn/ver/680/trunk/app/views/profile
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/!svn/ver/660/trunk/app/views/profile/index.html.erb
+END
+_graph_result_sixmonths.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/503/trunk/app/views/profile/_graph_result_sixmonths.html.erb
+END
+_graph_result_thismonth.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/567/trunk/app/views/profile/_graph_result_thismonth.html.erb
+END
+stats.erb
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/!svn/ver/680/trunk/app/views/profile/stats.erb
+END
+_graph_pie.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/477/trunk/app/views/profile/_graph_pie.html.erb
+END
+_retention_inline.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/646/trunk/app/views/profile/_retention_inline.html.erb
+END

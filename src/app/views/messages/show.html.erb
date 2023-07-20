@@ -1,0 +1,17 @@
+<p>
+  <b>Message:</b>
+  <%=h @message.message %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%=h @message.title %>
+</p>
+
+<p>
+  <b>Deck:</b>
+  <%=h @message.deck %>
+</p>
+
+<%= link_to 'Edit', edit_message_path(@message) %> |
+<%= link_to 'Back', messages_path %>

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/!svn/ver/740/trunk/app/views/cards
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/!svn/ver/701/trunk/app/views/cards/edit.html.erb
+END
+export_csv.erb
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/!svn/ver/602/trunk/app/views/cards/export_csv.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/!svn/ver/700/trunk/app/views/cards/new.html.erb
+END
+upload_csv.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/!svn/ver/602/trunk/app/views/cards/upload_csv.html.erb
+END
+_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/!svn/ver/740/trunk/app/views/cards/_form.html.erb
+END

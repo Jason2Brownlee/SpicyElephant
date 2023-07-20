@@ -1,0 +1,66 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+# alphabet
+
+a:
+    deck: alphabet
+    question: a
+    answer: apple
+    
+b:
+    deck: alphabet
+    question: b
+    answer: ball
+    
+c:
+    deck: alphabet
+    question: c
+    answer: cat
+           
+d:
+    deck: alphabet
+    question: d
+    answer: dog
+
+e:
+    deck: alphabet
+    question: e
+    answer: elephant
+
+f:
+    deck: alphabet
+    question: f
+    answer: frog
+    
+    
+# numbers
+
+1:
+    deck: numbers
+    question: 1
+    answer: 1 bottle on wall
+    
+2:
+    deck: numbers
+    question: 2
+    answer: 2 bottles on wall
+    
+3:
+    deck: numbers
+    question: 3
+    answer: 3 bottles on wall
+           
+4:
+    deck: numbers
+    question: 4
+    answer: 4 bottles on wall
+
+5:
+    deck: numbers
+    question: 5
+    answer: 5 bottles on wall
+
+6:
+    deck: numbers
+    question: 6
+    answer: 6 bottles on wall

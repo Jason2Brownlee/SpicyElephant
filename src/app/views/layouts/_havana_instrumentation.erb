@@ -1,0 +1,9 @@
+<script type="text/javascript">var firstbytetime = Number(new Date());</script>
+<script type="text/javascript" src="http://havana.mayhemmethod.com/javascripts/havana/havana.js"></script>
+
+<% if ENV['RAILS_ENV'] == 'production' %>
+<script type="text/javascript">HAVANA.init(firstbytetime, "c652af06");</script>
+<% end %>
+<% if ENV['RAILS_ENV'] == 'staging' %>
+<script type="text/javascript">HAVANA.init(firstbytetime, "ce4c9237");</script>
+<% end %>

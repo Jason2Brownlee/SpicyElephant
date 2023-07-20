@@ -1,0 +1,94 @@
+8
+
+dir
+740
+http://svn.spicyelephant.com/trunk/vendor/plugins/hobosupport
+http://svn.spicyelephant.com
+
+
+
+2008-07-08T12:05:53.181599Z
+1
+root
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+b44e13de-d91c-40e6-bcb6-fc5b3c2c1b1a
+
+test
+dir
+
+Rakefile
+file
+
+
+
+
+2008-09-22T01:44:32.000000Z
+3c44561d8ed8491caacd7059aa35259a
+2008-07-08T12:05:53.181599Z
+1
+root
+
+Manifest.txt
+file
+
+
+
+
+2008-09-22T01:44:32.000000Z
+938054f37cfad0c1dfe92968ac5dcd49
+2008-07-08T12:05:53.181599Z
+1
+root
+
+lib
+dir
+
+CHANGES.txt
+file
+
+
+
+
+2008-09-22T01:44:32.000000Z
+d543ad2baa47a753c2e5588ac0391870
+2008-07-08T12:05:53.181599Z
+1
+root
+
+Manifest
+file
+
+
+
+
+2008-09-22T01:44:32.000000Z
+8e5611df9c04cbb8536e85fc68882ce5
+2008-07-08T12:05:53.181599Z
+1
+root
+
+README.txt
+file
+
+
+
+
+2008-09-22T01:44:32.000000Z
+539e8851186831c02f98cc881d9003f3
+2008-07-08T12:05:53.181599Z
+1
+root
+

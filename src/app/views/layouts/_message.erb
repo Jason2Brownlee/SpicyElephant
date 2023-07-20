@@ -1,0 +1,10 @@
+<% if flash[:notice] != nil %>
+<p align="center">
+    <span class="msg" id="flashMessage"><%= flash[:notice] %></span>
+</p>
+<% end %>
+<% if flash[:error] != nil %>
+<p align="center">
+    <span class="msg" id="flashError"><%= flash[:error] %></span>
+</p>
+<% end %>

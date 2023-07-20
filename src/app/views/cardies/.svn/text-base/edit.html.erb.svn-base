@@ -1,0 +1,6 @@
+<div id="cardy-form"></div>
+<%= render :partial => 'form_items', :object => :cardy_form_items %>
+<%= ext_form_for :cardy,
+                 :element => 'cardy-form',
+                 :form_items => :cardy_form_items,
+                 :mode => :edit %>

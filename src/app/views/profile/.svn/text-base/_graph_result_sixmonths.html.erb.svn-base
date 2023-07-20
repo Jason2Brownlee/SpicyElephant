@@ -1,0 +1,26 @@
+<%
+# Expected: user
+
+name = "Ruminations Over the Last Six Months"
+
+
+results = ""
+labels = ""
+max_value = 10
+today = Time.zone.today
+s_date = today.to_time.beginning_of_month.to_date
+s_date = s_date.to_time.months_ago(5).to_date
+
+(0..5).each do |i|
+	e_date = s_date.to_time.end_of_month.to_date
+	rs = user.ruminations.count(:conditions => ["ruminations.created_at between date(?) and date(?)", s_date, e_date])
+	results += "," if i != 0
+	labels += "|" if i != 0
+	results += rs.to_s
+	max_value = rs.to_i if (rs.to_i > max_value)
+	labels += s_date.strftime("%b")
+	s_date = s_date.to_time.advance(:months => 1).to_date
+end
+%>
+<%= render :partial => "train/graph_bar", 
+:locals => {:name=>name,:max_value=>max_value,:col_width=>30,:colors=>"4d89f9",:results=>results,:labels=>labels} %>

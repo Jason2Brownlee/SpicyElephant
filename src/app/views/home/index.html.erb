@@ -1,0 +1,17 @@
+<% title site_motto %>
+<center>
+<%= image_tag 'logo_big.png', :alt => 'spicyelephant: the quickest way to put stuff in your brain' %>
+		<% if !logged_in? %>
+		<div class="links">
+			 <%= link_to 'Sign In', new_session_path, :class => "sign_in" %> or <%= link_to 'Register', new_user_path, :class => "sign_up" %>
+		</div>
+    <br /><br /><br />
+		<% end %>
+
+</center>
+
+<p align="center" class="intro_text">
+  <em>Welcome to <%= site_name %></em>. <br />
+	<% about_deck = Deck.default_about_deck %>
+	Study the <%= link_to about_deck.name, train_deck_path(about_deck) %> deck to find out more about us.
+</p>

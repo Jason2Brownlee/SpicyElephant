@@ -1,0 +1,9 @@
+A user has chosen to contact you via your web site.
+===================================================
+User: <%=@name %>
+Email: <%=@email %>
+Message:
+-----------------------------
+<%=@message %>
+-----------------------------
+Generated at <%=Time.now.to_s %>

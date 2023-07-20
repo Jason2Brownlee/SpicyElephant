@@ -1,0 +1,33 @@
+
+<% title "Sign In" %>
+<% form_tag session_path do %>
+  <div class="signup">
+    <h3>Sign In</h3>
+  <div class="form_row">
+    <label for="email" class="fixed" accesskey="E">
+      Email
+    </label>
+    <%= text_field_tag 'email', @email, :class=>'text_field' %>
+    <% content_for :late_script do %>
+      <script type="text/javascript">
+        document.getElementById('email').focus();
+      </script>
+    <% end %>
+    
+  </div>
+  <div class="form_row">
+    <label for="password" class="fixed" accesskey="P">
+      Password
+    </label>
+    <%= password_field_tag 'password', '', :class=>'text_field password' %>
+    <%= link_to 'Forgot password?', forgot_password_path, :class => 'forgot' %>
+  </div>
+  <div class="form_row">
+    <label for="remember_me" accesskey="m" class="remember">
+      Remember me:
+    </label>
+    <%= check_box_tag 'remember_me' %>
+  </div>
+  <%= submit_tag 'Sign In' %> or <%= link_to "Register", new_user_path %>
+</div>
+<% end %>

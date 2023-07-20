@@ -1,0 +1,26 @@
+<% title (@deck.name + ' : Post Message') %>
+<h3><span>
+<%= @deck.name %> : Post Messages
+</span></h3>
+<br class="clear" />
+
+<%= render :partial => "common/uni_form_includes" %>
+
+<% form_for([@deck, @message], :html => {:class => "uniForm"}) do |f| %>
+  <%= f.error_messages %>
+  
+  	<fieldset class="inlineLabels">
+		
+	<legend></legend>
+    <div class="ctrlHolder">
+        <p>
+        	<label for="message"><em>*</em>Message</label>
+            <%= f.text_area :message %>
+        </p>
+    </div>
+<p>
+    <%= f.submit "Post Message" %> 
+	or 
+	<%= link_to 'Cancel', @deck %>
+</p>
+<% end %>

@@ -1,0 +1,58 @@
+<% title 'My Account' %>
+<h3><span>My Account</span></h3>
+
+<%= avatar_tag(@user, {} , {:default => 'identicon', :size => 40, :style => "float: right; margin-right: 10px; margin-top: 1.5em;"}) %>
+<small style="float: right; font-size:10px;">&nbsp;Note avatar provided by global avatar service</small>
+<a href="http://en.gravatar.com/site/signup/" style="float: right;">Change Avatar</a>
+
+
+<br/>
+<table>
+	<tr>
+		<td><b>Screen Name:</b></td>
+		<td><%=h @user.login %></td>
+	</tr>
+	<tr>
+		<td><b>Your Email: </b></td>
+		<td>
+			<%= mail_to @user.email %>
+		</td>
+	</tr>
+	<tr>
+		<td><b>Local Time Zone: </b></td>
+		<td>
+			<%= Time.zone.name %>
+		</td>
+	</tr>
+	<tr>
+		<td><b>Email Notification: </b></td>
+		<td>
+			<%= @user.notification_enabled ? 'Weekly' : 'Disabled' %>
+		</td>
+	</tr>
+	<tr>
+		<td><b>User Since: </td>
+		<td><%= @user.created_at.to_s(:long) %></b></td>
+	</tr>
+	<tr>
+		<td><b>Subscription: </td>
+		<td>
+			<% if @user.has_subscribed_role? %>
+				<strong>Lifetime Premium Account</strong>
+			<% else %>
+				Free Account, <%= link_to 'Upgrade to Premium Now!', upgrade_path %>
+			<% end %>
+		</td>
+	</tr>
+</table>
+
+<br/>
+<p>
+	<%= link_to "Edit Details", edit_user_path(current_user) %> | 
+	<%= link_to 'Change Password', change_password_path %>
+</p>
+
+<br />
+<br />
+<br />
+

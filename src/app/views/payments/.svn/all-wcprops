@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/!svn/ver/729/trunk/app/views/payments
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/!svn/ver/694/trunk/app/views/payments/index.html.erb
+END
+upgrade.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/!svn/ver/729/trunk/app/views/payments/upgrade.html.erb
+END
+complete.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/!svn/ver/571/trunk/app/views/payments/complete.html.erb
+END
+error.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/!svn/ver/469/trunk/app/views/payments/error.html.erb
+END
+confirm.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/!svn/ver/558/trunk/app/views/payments/confirm.html.erb
+END

@@ -1,0 +1,58 @@
+8
+
+dir
+740
+http://svn.spicyelephant.com/trunk/db
+http://svn.spicyelephant.com
+
+
+
+2008-07-27T14:23:24.243127Z
+549
+ctaylor
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+b44e13de-d91c-40e6-bcb6-fc5b3c2c1b1a
+
+schema.rb
+file
+
+
+
+
+2008-09-22T01:44:29.000000Z
+a66a8c0dac9a980bcb59690e42cb4506
+2008-07-27T14:23:24.243127Z
+549
+ctaylor
+
+migrate
+dir
+
+fixtures
+dir
+
+README
+file
+
+
+
+
+2008-09-22T01:44:29.000000Z
+49fd37fad599200c4d4eec307932d5c6
+2008-07-08T12:05:53.181599Z
+1
+root
+

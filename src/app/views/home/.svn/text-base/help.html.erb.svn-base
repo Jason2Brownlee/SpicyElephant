@@ -1,0 +1,65 @@
+<% title "Help" %>
+<h3><span>Help</span></h3>
+<!-- // Satisfaction CSS // -->
+<style type="text/css" media="all">
+  div#satisfactionWidget { font: 12px 'Lucida Grande', sans-serif; margin: 20px; padding: 10px 20px; border: 5px solid #DDD; }
+  div#satisfactionWidget h2 a { color: #000; }
+  div#satisfactionWidget h2 a u {color: blue;}
+  div#gsfn_list_widget img { border: none; }
+  div#gsfn_list_widget h2.gsfn_company{ font-weight:bold; margin:10px 0; padding:0; }
+  div#gsfn_list_widget .powered_by { margin-top: 8px; padding-top: 8px; border-top: 1px solid #DDD; }
+  div#gsfn_list_widget .powered_by a { color: #333; font-size: 90%; }
+  div#gsfn_list_widget div#gsfn_content ul { list-style: none; padding-left: 0; margin-left: 0; }
+  div#gsfn_list_widget div#gsfn_content li { text-align:left; margin-bottom:6px; }
+  div#gsfn_list_widget div#gsfn_content a.gsfn_link { line-height: 1; }
+  div#gsfn_list_widget div#gsfn_content span.time { font-size: 90%; padding-left: 3px; }
+  div#gsfn_list_widget div#gsfn_content p.gsfn_summary { margin-top: 2px }
+  div#gsfn_search_widget h2.gsfn_company{ font-weight:bold; margin:10px 0; padding:0; }
+  div#gsfn_search_widget form { margin-bottom: 8px; }
+  div#gsfn_search_widget form label { margin-bottom: 5px; display: block; }
+  div#gsfn_search_widget form #gsfn_search_query { width: 60%; }
+  div#gsfn_search_widget div.gsfn_content { }
+  div#gsfn_search_widget div.gsfn_content ul { padding-left: 0; margin-left: 0; list-style: none;}
+  div#gsfn_search_widget div.gsfn_content li { text-align:left; margin-bottom:6px; }
+  div#gsfn_search_widget div.gsfn_content a.gsfn_link { line-height: 1; }
+  div#gsfn_search_widget div.gsfn_content span.time { font-size: 90%; padding-left: 3px; }
+  div#gsfn_search_widget div.gsfn_content p.gsfn_summary { margin-top: 2px }
+</style>
+<!-- // End Satisfaction CSS // -->
+
+  
+  <!-- // Satisfaction Markup // -->
+      <div id="satisfactionWidget">
+        <div id="gsfn_search_widget">
+
+          <h2 class="gsfn_company">
+            <a href="http://getsatisfaction.com/spicyelephant">People-Powered Support for Spicy Elephant</a>
+          </h2>
+          <div class="gsfn_content">
+            <form id="gsfn_search_form" action="http://getsatisfaction.com/spicyelephant" method="get" accept-charset="utf-8" onsubmit="gsfn_search(this); return false;">
+              <input type="hidden" name="widget" value="" />
+              <input type="hidden" name="limit" value="5" />
+              <input type="hidden" name="style" value="" />
+              <input type="hidden" name="callback" value="gsfnResultsCallback" />
+              <input type="hidden" name="format" value="json" />
+              <label for="gsfn_search_query" class="gsfn_label">Ask a question, share an idea, or report a problem and get help from the Spicy Elephant community:</label>
+              <input type="text" name="query" value="" id="gsfn_search_query" maxlength="120" />
+              <input type="submit" id="continue" value="Continue" />
+            </form>
+            <div id="gsfn_search_results" style="height: auto;"></div>
+          </div>
+
+        </div>
+        <div id="gsfn_list_widget">
+          <h2 class="gsfn_company"><a href="http://getsatisfaction.com/spicyelephant" class="widget_title">Active discussions in Spicy Elephant <u>(See All)</u></a></h2>
+          <div id="gsfn_content">Loading...</div>
+          <div class="powered_by"><a href="http://getsatisfaction.com/"><img alt="Favicon" src="http://www.getsatisfaction.com/favicon.gif" style="vertical-align: middle;" /></a> <a href="http://getsatisfaction.com/">Service and support by Satisfaction</a></div>
+        </div>
+
+      </div>
+      <!-- // End Satisfaction Markup // -->
+	  <!-- // Satisfaction Javascript // -->
+	  <%= javascript_include_tag 'getsatisfaction', :cache => true %>
+	  <script src="http://getsatisfaction.com/spicyelephant/topics.json?callback=gsfnTopicsCallback&amp;limit=5&amp;sort=last_active_at&amp;style=topics" type="text/javascript"></script>
+	  <!-- // End Satisfaction Javascript // -->
+

@@ -1,0 +1,16 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+
+alphabet:
+    name: alphabet
+    description: learning the alphabet
+    visibility: public
+    user: quentin
+    instruction: words for a given letter
+
+numbers: 
+    name: numbers
+    description: learning numbers
+    visibility: public
+    user: quentin
+    instruction: something something

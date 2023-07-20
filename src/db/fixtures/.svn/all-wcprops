@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 31
+/!svn/ver/549/trunk/db/fixtures
+END
+002_deck_pinyin.rb
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/!svn/ver/9/trunk/db/fixtures/002_deck_pinyin.rb
+END
+003_deck_french_basic.rb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/!svn/ver/182/trunk/db/fixtures/003_deck_french_basic.rb
+END
+001_users.rb
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/!svn/ver/240/trunk/db/fixtures/001_users.rb
+END
+004_math_vocab.rb
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/!svn/ver/549/trunk/db/fixtures/004_math_vocab.rb
+END
+005_basic_java.rb
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/!svn/ver/31/trunk/db/fixtures/005_basic_java.rb
+END
+006_world_flags.rb
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/!svn/ver/47/trunk/db/fixtures/006_world_flags.rb
+END

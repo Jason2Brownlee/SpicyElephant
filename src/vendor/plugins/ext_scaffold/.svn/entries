@@ -1,0 +1,127 @@
+8
+
+dir
+740
+http://svn.spicyelephant.com/trunk/vendor/plugins/ext_scaffold
+http://svn.spicyelephant.com
+
+
+
+2008-07-27T05:46:52.190762Z
+527
+ctaylor
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+b44e13de-d91c-40e6-bcb6-fc5b3c2c1b1a
+
+test
+dir
+
+assets
+dir
+
+Rakefile
+file
+
+
+
+
+2008-09-22T01:44:31.000000Z
+fa984ba13f12665f1a0b0bb69c1da13b
+2008-07-27T05:46:52.190762Z
+527
+ctaylor
+
+tasks
+dir
+
+TODO
+file
+
+
+
+
+2008-09-22T01:44:31.000000Z
+c8cf937d11f0e680958cd39efe425b3b
+2008-07-27T05:46:52.190762Z
+527
+ctaylor
+
+init.rb
+file
+
+
+
+
+2008-09-22T01:44:31.000000Z
+caf035909a81cd9fa012e1e4f5cfa153
+2008-07-27T05:46:52.190762Z
+527
+ctaylor
+
+lib
+dir
+
+install.rb
+file
+
+
+
+
+2008-09-22T01:44:31.000000Z
+0849e71903503b75485280fef4bd1257
+2008-07-27T05:46:52.190762Z
+527
+ctaylor
+
+generators
+dir
+
+MIT-LICENSE
+file
+
+
+
+
+2008-09-22T01:44:31.000000Z
+99be3ad3f5e4c58e4a861d95c1213e20
+2008-07-27T05:46:52.190762Z
+527
+ctaylor
+
+uninstall.rb
+file
+
+
+
+
+2008-09-22T01:44:31.000000Z
+2a5fc883fe7f8dfe22ced24643d59ad4
+2008-07-27T05:46:52.190762Z
+527
+ctaylor
+
+README
+file
+
+
+
+
+2008-09-22T01:44:31.000000Z
+ddddf5d1025178910229e9e5a28a6dc6
+2008-07-27T05:46:52.190762Z
+527
+ctaylor
+

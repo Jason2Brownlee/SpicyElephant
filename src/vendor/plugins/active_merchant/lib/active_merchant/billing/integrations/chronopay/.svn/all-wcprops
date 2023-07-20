@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/!svn/ver/470/trunk/vendor/plugins/active_merchant/lib/active_merchant/billing/integrations/chronopay
+END
+helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/!svn/ver/470/trunk/vendor/plugins/active_merchant/lib/active_merchant/billing/integrations/chronopay/helper.rb
+END
+return.rb
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/!svn/ver/470/trunk/vendor/plugins/active_merchant/lib/active_merchant/billing/integrations/chronopay/return.rb
+END
+notification.rb
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/!svn/ver/470/trunk/vendor/plugins/active_merchant/lib/active_merchant/billing/integrations/chronopay/notification.rb
+END

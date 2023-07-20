@@ -1,0 +1,114 @@
+<%
+# Expected: deck, user_profile
+# Optional: is_profile, is_train, is_authored, show_meta
+
+show_meta = false if local_assigns[:show_meta].nil?
+is_profile = false if local_assigns[:is_profile].nil?
+is_train = false if local_assigns[:is_train].nil?
+is_authored = false if local_assigns[:is_authored].nil?
+
+if is_train
+	num_scheduled_cards = current_user.study_mode.count_review_user(current_user, deck)
+end
+%>
+
+<tr>
+
+  <td class="deck_info" valign="bottom" width="*">
+<% if deck.is_visible?(current_user) %>
+      <h4><%= link_to deck.name, deck %></h4>
+      
+        <p class="desc"><%= snippet(strip_tags(deck.description), 15) %></p>
+<% else %>
+      <h4>Private Deck</h4>
+      <div class="desc">A deck that is only visible to the deck author.</div>
+<% end %>
+<% if show_meta %>
+    <div class="meta">
+      <% if !is_profile %>
+        by <%= deck_author_link(deck) %> |
+      <% end %>
+      <%= comments_on_deck_link(deck) %> |
+      <%= deck_users_link(deck) %>
+    </div>
+<% end %>
+  </td>
+  
+
+   <% if is_profile %>
+          <td align="left" style="width:16em;">
+   <% else %>
+          <td style="width:16em;">
+   <% end %>
+            <% if is_train %>
+<% if deck.cards.count == 0 %>
+
+  deck is empty
+
+<% else %>
+                <div class="button">
+                  <div class="left"><div class="top"> </div></div>
+                    <div class="button_content">
+                      <em class="cards"><%= num_scheduled_cards %></em>
+                      <span class="main_link">
+                      <% if num_scheduled_cards == 0 %>
+                        <%= train_on_deck_link(deck, 'review') %>
+                      <% else %>
+                        <%= train_on_deck_link(deck) %>
+                      <% end %>
+                      <a href="#" onclick="show_options(this);" class="more_link"><%= image_tag('button_arrow.png', :alt => 'show more options') %></a>
+                      </span>
+                      <div class="sub_button" onmouseover="show_options(this);" onmouseout="hide_options(this);">
+                        <% if Curriculum.deck_in_user_curriculum?(current_user, deck) %>
+                          <% if !is_profile and !is_authored or ((is_profile or is_authored) and current_user.id==user_profile.id) %>
+                            <%= link_to("unsubscribe", curriculum_destroy_path(deck), :class => "del_deck_link", :title => "remove the deck from your study list") %>
+                          <% end %>
+                        <% elsif deck.is_visible?(current_user) and current_user.can_add_to_curriculum? %>    
+                          <%= link_to("subscribe", curriculum_add_path(deck), :class => "add_card_link", :title => "add the deck to your study list") %>
+                        <% end %>
+                      </div>
+                    </div>
+                  <div class="right"><div class="top"> </div></div>
+                </div>
+                <% end %>
+            <% else %>
+<% if deck.cards.count == 0 %>
+
+  deck is empty
+
+<% else %>
+<% if deck.is_visible?(current_user) and !deck.cards.empty? %>
+<div class="button">
+                  <div class="left"><div class="top"> </div></div>
+                    <div class="button_content">
+                      <% if logged_in? %>
+        <% if Curriculum.deck_in_user_curriculum?(current_user, deck) %>
+
+                          <% if !is_profile and !is_authored or ((is_profile or is_authored) and current_user.id==user_profile.id) %>
+                        <em class="cards"><%= image_tag 'ico_unsubscribe.png', :alt=>'unsubscribe' %></em><span class="action_link"><%= link_to("unsubscribe", curriculum_destroy_path(deck), :class => "del_deck_link", :title => "remove the deck from your study list") %></span>
+                          <% end %>
+                        <% elsif deck.is_visible?(current_user) and current_user.can_add_to_curriculum? %>    
+                            <em class="cards"><%= image_tag 'ico_subscribe.png', :alt=>'subscribe' %></em><span class="action_link"><%= link_to("subscribe", curriculum_add_path(deck), :class => "add_card_link", :title => "add the deck to your study list") %></span>
+                        <% else %>    
+                          <em class="cards"><%= image_tag 'ico_premium.png', :alt=>'premium' %></em><span class="action_link"><%= link_to 'upgrade your account', upgrade_path, :class => "upgrade_link", :title => "upgrade your account" %></span>
+                        <% end %>
+<% else %>
+<em class="cards" style="width:5em;"><%= deck_cards(deck) %></em>
+<span class="main_link" style="margin-left: 5px;"><%= train_on_deck_link(deck, 'review') %></span>
+<% end %>
+    <% end %>
+
+
+                    </div>
+                  <div class="right"><div class="top"> </div></div>
+                </div>
+                <% end %>
+        <% end %>
+        </td>
+<% if is_train %>
+	<td valign="bottom">
+		<%= render :partial => "profile/retention_inline", :locals => {:user=>current_user, :deck=>deck} %>
+	</td>
+	<% end %>
+
+</tr>

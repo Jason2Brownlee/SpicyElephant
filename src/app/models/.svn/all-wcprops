@@ -1,0 +1,143 @@
+K 25
+svn:wc:ra_dav:version-url
+V 30
+/!svn/ver/713/trunk/app/models
+END
+feedback_mailer.rb
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/!svn/ver/154/trunk/app/models/feedback_mailer.rb
+END
+tableless.rb
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/!svn/ver/54/trunk/app/models/tableless.rb
+END
+user.rb
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/!svn/ver/713/trunk/app/models/user.rb
+END
+rumination_result.rb
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/!svn/ver/324/trunk/app/models/rumination_result.rb
+END
+message.rb
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/!svn/ver/428/trunk/app/models/message.rb
+END
+feedback.rb
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/!svn/ver/79/trunk/app/models/feedback.rb
+END
+subscription.rb
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/!svn/ver/484/trunk/app/models/subscription.rb
+END
+rumination.rb
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/!svn/ver/340/trunk/app/models/rumination.rb
+END
+user_observer.rb
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/!svn/ver/4/trunk/app/models/user_observer.rb
+END
+permission.rb
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/!svn/ver/484/trunk/app/models/permission.rb
+END
+curriculum.rb
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/!svn/ver/365/trunk/app/models/curriculum.rb
+END
+multi_choice_option.rb
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/!svn/ver/487/trunk/app/models/multi_choice_option.rb
+END
+activity.rb
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/!svn/ver/648/trunk/app/models/activity.rb
+END
+multi_choice_card.rb
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/!svn/ver/434/trunk/app/models/multi_choice_card.rb
+END
+role.rb
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/!svn/ver/4/trunk/app/models/role.rb
+END
+cardy.rb
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/!svn/ver/527/trunk/app/models/cardy.rb
+END
+deck.rb
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/!svn/ver/672/trunk/app/models/deck.rb
+END
+user_mailer.rb
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/!svn/ver/678/trunk/app/models/user_mailer.rb
+END
+recommend.rb
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/!svn/ver/426/trunk/app/models/recommend.rb
+END
+card.rb
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/!svn/ver/655/trunk/app/models/card.rb
+END
+study_session.rb
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/!svn/ver/527/trunk/app/models/study_session.rb
+END
+study_mode.rb
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/!svn/ver/408/trunk/app/models/study_mode.rb
+END
+supermemo_state.rb
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/!svn/ver/514/trunk/app/models/supermemo_state.rb
+END

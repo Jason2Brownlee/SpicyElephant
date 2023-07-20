@@ -1,0 +1,21 @@
+<% title (@deck.name + ' : Upload Cards') %>
+<h3><span><%= @deck.name %> : Upload cards</span></h3>
+<p class="intro_text">
+	Upload cards to this deck in the form of .csv files. These are 
+	plain text files where each line represents a card, and the question
+	and answer are separated by a comma.
+</p>
+
+<br/>
+<% form_tag cards_upload_path(@deck), :multipart => true do %>
+<table>
+	<tr>
+		<td><label for="upload">Select File</label>:</td>
+		<td><%= file_field 'upload', 'filedata' %></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><%= submit_tag "Upload" %></td>
+	</tr>
+</table>
+<% end %>

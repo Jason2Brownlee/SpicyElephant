@@ -1,0 +1,13 @@
+<% title (@card.deck.name + ' : Edit Card') %>
+<h3><span><%= @card.deck.name %> : Edit Card</span></h3>
+
+<% form_for([@card.deck, @card]) do |f| %>
+	<%= f.error_messages %>
+        <input type="hidden" name="page" value="<%= @page %>" />
+	<%= render :partial => f, :locals =>{:f => f} %>
+	<br class="clear">
+	<p>
+	    <%= f.submit "Update" %> or <%= link_to 'Cancel', @card.deck %>
+	</p>
+<% end %>
+<br/>

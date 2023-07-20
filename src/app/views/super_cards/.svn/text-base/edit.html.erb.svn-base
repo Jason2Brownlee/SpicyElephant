@@ -1,0 +1,6 @@
+<div id="super_card-form"></div>
+<%= render :partial => 'form_items', :object => :super_card_form_items %>
+<%= ext_form_for :super_card,
+                 :element => 'super_card-form',
+                 :form_items => :super_card_form_items,
+                 :mode => :edit %>

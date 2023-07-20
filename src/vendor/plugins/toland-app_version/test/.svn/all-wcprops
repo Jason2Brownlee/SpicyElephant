@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/45/trunk/vendor/plugins/toland-app_version/test
+END
+version.yml
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/45/trunk/vendor/plugins/toland-app_version/test/version.yml
+END
+version_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/45/trunk/vendor/plugins/toland-app_version/test/version_test.rb
+END

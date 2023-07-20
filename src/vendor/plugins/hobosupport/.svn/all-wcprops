@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/!svn/ver/4/trunk/vendor/plugins/hobosupport
+END
+Rakefile
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/!svn/ver/4/trunk/vendor/plugins/hobosupport/Rakefile
+END
+Manifest.txt
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/4/trunk/vendor/plugins/hobosupport/Manifest.txt
+END
+CHANGES.txt
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/!svn/ver/4/trunk/vendor/plugins/hobosupport/CHANGES.txt
+END
+Manifest
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/!svn/ver/4/trunk/vendor/plugins/hobosupport/Manifest
+END
+README.txt
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/!svn/ver/4/trunk/vendor/plugins/hobosupport/README.txt
+END

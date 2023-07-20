@@ -1,0 +1,54 @@
+<% title "Training Review" %>
+<h3><span>Training Review</span></h3>
+
+<table width="100%" border="0">
+	<tr>
+		<td valign="top" width="80%">
+		<p class="intro_text">
+			<em>Congratulations, you have finished a study session.</em>
+			<br/>
+			You studied <em><%=h count_cards(@total_results) %></em>
+			and marked <em><%=h @positive_results %> passed</em>
+			and <em><%=h @negative_results %> failed</em>.
+		</p>
+		<br/>
+		<p class="intro_text">
+			<% if logged_in? %>
+				<%= link_to "Back to study", train_path %>
+			<% else %>
+				<%= link_to "Explore", decks_path %> for more decks.
+			<% end %>
+		</p>
+		</td>
+		
+		<td align="center" valign="top">
+		<% if !@study_session.ruminations.empty? %>
+			<%= render :partial => "profile/graph_pie", :locals => {:rs => @study_session.ruminations.count(:all, :include => :rumination_result, :group => "rumination_results.name"), :name => "Study Results", :show_total => false} %>
+		<% end %>
+		</td>
+	</tr>
+</table>
+
+<% if !@study_session.ruminations.empty? %>
+<h3><span>Training Details</span></h3>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" >
+	<tr class="header_row">
+		<th width="40%">Question</th>
+    	<th width="40%">Answer</th>
+		<th align="right">Result</th>
+  	</tr>
+	<% for rum in @study_session.ruminations %>
+		<tr style="background: <%= cycle('#fff', '#f5f5f5') %>;">
+			<td><%= sanitize(rum.card.question) %></td>
+		    <td><%= sanitize(rum.card.answer) %></td>
+			<td align="right"><%= rum.rumination_result.name %>	</td>
+		</tr>
+	<% end %>
+</table>
+<% end %>
+<br />
+
+<center>
+<%= render :partial => "/layouts/google_adsense" %>
+</center>
+

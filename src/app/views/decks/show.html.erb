@@ -1,0 +1,229 @@
+<%= javascript_include_tag('jquery.jeditable.pack') %>
+
+<% if false && @deck.can_edit?(current_user) %>
+  <script>
+      $(document).ready(function() {
+          $(".edit").editable("<%= inplace_edit_path :only_path => false -%>", { 
+          type      : 'textarea',
+          cancel    : 'Discard Changes',
+          submit    : 'Save',
+          //submitdata : 'authenticity_token=<%= form_authenticity_token() %>',
+          //indicator : "<img src='img/indicator.gif'>",
+          onblur    : 'submit',
+          tooltip   : 'Click to edit...',
+          rows      : 4
+      });
+      $(".heading_edit").editable("<%= inplace_edit_path :only_path => false -%>", { 
+      //type      : 'textarea',
+      //cancel    : 'Discard Changes',
+      //submit    : 'Save',
+      //submitdata : 'authenticity_token=<%= form_authenticity_token() %>',
+      //indicator : "<img src='img/indicator.gif'>",
+      onblur    : 'submit',
+      tooltip   : 'Click to edit...'
+  });
+  });
+  </script>
+<% end %>
+
+
+<% title @deck.name %>
+
+<% content_for :metadata do %>
+  <meta name="description" content="<%= @deck.name %>">
+  <meta name="abstract" content="<%= strip_tags(@deck.description) %>">
+  <meta name="keywords" content="flashcards">
+  <meta name="Author" content="<%= @deck.user.humanized_name %>">
+  <meta name="copyright" content="&copy; 2008 Mayhem">
+  <meta name="doc-rights" content="Public">
+  <meta name="created" content="<%= @deck.created_at %>">
+  <meta name="doc-class" content="Living Document">
+<% end %>
+
+<div class="deck_title">
+
+	<h3><%=h @deck.name %></h3>
+	<div class="deck_actions">
+		<% if is_current_deck_author(@deck) %>
+		<%= link_to 'Edit Deck', edit_deck_path(@deck), :class => "edit_deck_link" %> | 
+		<%= link_to 'Delete Deck', @deck, :confirm => 'Delete deck?', :method => :delete, :class => "del_deck_link" %> |
+  <% if logged_in? %>
+				<%= link_to "Recommend to Friend", recommend_path(@deck) %> |
+			<% end %>  
+  <% if @deck.is_public? %>
+				<strong class="public"><%= @deck.visibility %> deck</strong> 
+			<% else %>
+				<strong class="private"><%= @deck.visibility %> deck</strong>
+			<% end %>		
+    <% end %>
+	</div>
+</div>
+	<div class="deck_description">
+		<%= @deck.description %>
+		<%= @deck.instruction %>
+	</div>
+  	<p>
+      
+      <% if logged_in? %>
+		<% if Curriculum.deck_in_user_curriculum?(current_user, @deck) %>
+
+            <div class="button">
+              <div class="left"><div class="top"> </div></div>
+              <div class="button_content">
+			<%= train_on_deck_link(@deck, 'study now') %>
+    </div>
+<div class="right"><div class="top"> </div></div>
+            </div>
+		<% elsif current_user.can_add_to_curriculum? %>
+<div class="button">
+              <div class="left"><div class="top"> </div></div>
+              <div class="button_content">
+			<%= add_to_curriculum_link(@deck) %>
+    </div>
+<div class="right"><div class="top"> </div></div>
+</div> <span style="float:left;line-height:2em;padding:0 7px;">or</span> 
+<div class="button">
+              <div class="left"><div class="top"> </div></div>
+              <div class="button_content">
+			<%= train_on_deck_link(@deck, 'study now') %>
+    </div>
+<div class="right"><div class="top"> </div></div>
+            </div>
+    <% else %>
+<div class="button">
+              <div class="left"><div class="top"> </div></div>
+              <div class="button_content">
+<em class="cards"><%= image_tag 'ico_premium.png', :alt=>'premium' %></em><span class="action_link"><%= link_to 'upgrade your account', upgrade_path, :class => "upgrade_link", :title => "upgrade your account" %></span>
+	    </div>
+<div class="right"><div class="top"> </div></div>
+            </div>	
+  <% end %>
+	<% else %>
+<div class="button">
+              <div class="left"><div class="top"> </div></div>
+              <div class="button_content">
+		<%= train_on_deck_link(@deck, "review this deck") %>
+    </div>
+<div class="right"><div class="top"> </div></div>
+            </div>	
+<% end %>
+
+   </p>
+<br/><br/><br/>
+<table style="clear:left;" width="100%">
+<tr>
+<td width="260" valign="top">
+
+	
+	
+	
+	<div class="users_panel">
+	
+		<div class="deck_author">
+			<h4>deck author</h4>
+			<%= avatar_tag(@deck.user, :size => 30, :default => 'identicon' ) %>
+      <div class="user_info">
+        <strong><%= deck_author_link(@deck) %></strong>
+        <p class="intro_text">Created <em><%=h time_distance_or_time_stamp(@deck.created_at) %></em></p>
+      </div>
+		</div>
+		
+		<div class="deck_users">
+			<h4>deck subscribers</h4>
+			<% for user in @subscribed_users %>
+				<%= render :partial => "deck_users", :locals => {:user => user, :deck => @deck} %>
+			<% end %>
+			<% if @deck.users.count > 5 %>
+<div class="more_link">
+				<%= link_to( "View all #{@deck.users.count} Users", subscribers_deck_path(@deck), :class => 'details_link') %>			
+      </div>			
+<%end %>
+		</div>
+	</div>
+	<br />
+	<div class="comments_panel">
+		<div class="post_comment">
+      <% if @deck.messages.count > 0 %>
+			<h4>comments</h4>
+			
+		</div>
+			<% for message in @deck.messages.find(:all, :order =>"created_at DESC", :limit => 5) %>
+				<%= render :partial => "deck_comment", :locals => {:message => message} %>
+			<% end %>
+
+      <% if @deck.messages.count > 5 %>
+<div class="more_link">
+		<%= link_to( "View all #{@deck.messages.count} Messages", deck_messages_path(@deck), :class => 'details_link') %>
+  </div>		
+  <%end %>
+  <br />
+  <%end %>
+  <%= render :partial => "deck_new_comment", :locals => {:deck => @deck} %>
+
+
+	</div>
+</td>
+<td valign="top" style="padding-left:60px;">
+<div class="deck_meta">
+	
+		<div class="card_count" style="text-align: right;border-bottom:1px solid #ccc;">
+			<strong class="count" style="float:left;">this deck has <%= deck_cards(@deck) -%></strong> 
+
+      <% if is_current_deck_author(@deck) %>
+          <%= link_to 'Add', new_deck_card_path(@deck), :class => "add_card_link" %> |
+				  <%= link_to "Upload", cards_upload_path(@deck), :class => "add_card_link" %> |
+			<% end %>
+			 <%= link_to "Export", export_csv_deck_cards_path(@deck), :class => "add_card_link" %>
+<% if logged_in? and !is_current_deck_author(@deck) %>
+				or <%= link_to "Copy Deck", copy_deck_path(@deck) %> and take ownership
+			<% end %>
+		</div>
+
+
+
+	</div>
+      
+<table class="deck_list"  border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr class="header_row">
+    <% if is_current_deck_author(@deck) %>
+      <th width="11%"> </th>
+    <% end %>
+    <th width="37%" align="left">Question</th>
+    <th width="37%" align="left" style="padding-left: 10px;">Answer</th>
+    <% if logged_in? && Curriculum.deck_in_user_curriculum?(current_user, @deck) %>
+      <th width="5%" align="center">Studied</th>
+    <% end %>
+
+  </tr>
+  
+  <% for card in @cards %>
+    <tr >
+      <% if is_current_deck_author(@deck) %>
+        <td align="left" valign="top">
+          <%= link_to image_tag("deck_edit.gif", :alt => "edit card"), edit_deck_card_path(@deck, card, :page => @cards.current_page) %>
+          <%= link_to image_tag("deck_del.gif", :alt => "Delete"), deck_card_path(@deck, card), :confirm => 'Are you sure?', :method => :delete %>
+        </td>
+      <% end %>
+      <td align="left">
+      
+        <div id="question<%= card.id %>" class="edit">
+          <%= sanitize(card.question) %>
+        </div>
+      
+      </td>
+      <td id="answer<%=card.id %>" class="edit" align="left" style="padding-left: 10px;">
+        <%= sanitize(card.answer) %>
+      </td>
+      <% if logged_in? && Curriculum.deck_in_user_curriculum?(current_user, @deck) %>
+        <td align="center"><%= Rumination.count_user_card_ruminations(current_user, card) %></td>
+      <% end %>
+    </tr>
+  
+  <% end %>
+</table>
+<div class="apple_pagination">
+<%= will_paginate @cards, :container => false %>
+</div>
+</td>
+</tr>
+</table>

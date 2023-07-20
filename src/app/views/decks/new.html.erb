@@ -1,0 +1,16 @@
+<% title 'Create Deck' %>
+<h3><span>Create Deck</span></h3>
+
+
+<%= render :partial => "common/uni_form_includes" %>
+
+	<% form_for @deck, :html => {:class => "uniForm"} do |f| %>
+	<%= f.error_messages %>
+	
+    <%= render :partial => f, :locals =>{:f => f} %>
+	
+    <%= f.submit "Create Deck" %> or <%= link_to 'Cancel', profile_path %>
+
+<% end %>
+
+

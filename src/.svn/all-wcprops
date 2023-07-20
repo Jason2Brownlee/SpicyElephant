@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 19
+/!svn/ver/740/trunk
+END
+Rakefile
+K 25
+svn:wc:ra_dav:version-url
+V 26
+/!svn/ver/4/trunk/Rakefile
+END
+Capfile
+K 25
+svn:wc:ra_dav:version-url
+V 27
+/!svn/ver/325/trunk/Capfile
+END
+send_notification.sh
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/!svn/ver/584/trunk/send_notification.sh
+END

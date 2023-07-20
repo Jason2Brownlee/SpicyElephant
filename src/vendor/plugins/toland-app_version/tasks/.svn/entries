@@ -1,0 +1,40 @@
+8
+
+dir
+740
+http://svn.spicyelephant.com/trunk/vendor/plugins/toland-app_version/tasks
+http://svn.spicyelephant.com
+
+
+
+2008-07-10T03:43:38.540861Z
+45
+ctaylor
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+b44e13de-d91c-40e6-bcb6-fc5b3c2c1b1a
+
+app_version_tasks.rake
+file
+
+
+
+
+2008-09-22T05:30:25.000000Z
+477ed82f39cf1631b425a7d7ad71feea
+2008-07-10T03:43:38.540861Z
+45
+ctaylor
+

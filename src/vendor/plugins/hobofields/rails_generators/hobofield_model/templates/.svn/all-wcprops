@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/4/trunk/vendor/plugins/hobofields/rails_generators/hobofield_model/templates
+END
+fixtures.yml.erb
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/!svn/ver/4/trunk/vendor/plugins/hobofields/rails_generators/hobofield_model/templates/fixtures.yml.erb
+END
+test.rb.erb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/!svn/ver/4/trunk/vendor/plugins/hobofields/rails_generators/hobofield_model/templates/test.rb.erb
+END
+model.rb.erb
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/!svn/ver/4/trunk/vendor/plugins/hobofields/rails_generators/hobofield_model/templates/model.rb.erb
+END

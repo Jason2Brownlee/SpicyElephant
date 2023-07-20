@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  user: tom
+  start_subscription_at: <%= 5.days.ago.to_s :db %>
+  end_subscription_at: 2009-07-25
+  transcation: MyText
+  created_at: 2008-07-25
+

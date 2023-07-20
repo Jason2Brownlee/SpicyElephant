@@ -1,0 +1,48 @@
+    <%
+# format: <user.login> <description> <deck.name>(if available) <created_at>
+# according to activity model
+
+# Parameter: activity
+
+%>
+<div class="activity">
+<div><p class="description">
+<% if activity.user.nil? %>
+	<%= image_tag("avatar_guest.gif", :alt => "guest", :size => "20x20") %>
+	A guest
+<% else %>
+	<%= avatar_tag(activity.user, :size => 20, :default => 'identicon') %>
+	<%= user_link(activity.user) %>
+<% end %>
+
+<%=h activity.note %>
+<% if !activity.deck.nil? %>
+	<% if activity.deck.is_public? %>
+		<%= link_to(activity.deck.name, activity.deck) %>
+	<% end %>
+<% end %>
+
+<% if !activity.study_session.nil? %>
+	(<%= count_cards(activity.study_session.ruminations.count) %>),
+<% end %>
+
+<%=h time_distance_or_time_stamp(activity.created_at) %>
+
+<span class="actions">
+
+<% if !activity.deck.nil? and activity.deck.is_public? %>
+	<% if logged_in? %>
+		<% if Curriculum.deck_in_user_curriculum?(current_user, activity.deck) %>
+			<%= train_on_deck_link(activity.deck) %>
+		<% elsif current_user.can_add_to_curriculum? %>
+			<%= add_to_curriculum_link(activity.deck) %>
+			<%= train_on_deck_link(activity.deck) %>
+		<% end %>
+	<% else %>
+		<%= train_on_deck_link(activity.deck) %>
+	<% end %>
+<% end %>
+</span>
+</p>
+</div>
+</div>

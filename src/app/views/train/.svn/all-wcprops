@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/!svn/ver/736/trunk/app/views/train
+END
+_train_decks.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/674/trunk/app/views/train/_train_decks.html.erb
+END
+_study_graph.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/443/trunk/app/views/train/_study_graph.html.erb
+END
+_train_schedule.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/!svn/ver/661/trunk/app/views/train/_train_schedule.html.erb
+END
+train2.erb
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/!svn/ver/742/trunk/app/views/train/train2.erb
+END
+train.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/!svn/ver/742/trunk/app/views/train/train.html.erb
+END
+_train_now.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/!svn/ver/660/trunk/app/views/train/_train_now.html.erb
+END
+finish.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/!svn/ver/729/trunk/app/views/train/finish.html.erb
+END
+_ruminate_buttons.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/683/trunk/app/views/train/_ruminate_buttons.html.erb
+END
+runimate.js.rjs
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/!svn/ver/736/trunk/app/views/train/runimate.js.rjs
+END
+_graph_bar.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/!svn/ver/481/trunk/app/views/train/_graph_bar.html.erb
+END
+ruminate.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/!svn/ver/731/trunk/app/views/train/ruminate.html.erb
+END

@@ -1,0 +1,55 @@
+8
+
+dir
+740
+http://svn.spicyelephant.com/trunk/vendor/plugins/ext_scaffold/generators/ext_scaffold
+http://svn.spicyelephant.com
+
+
+
+2008-07-27T05:46:52.190762Z
+527
+ctaylor
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+b44e13de-d91c-40e6-bcb6-fc5b3c2c1b1a
+
+USAGE
+file
+
+
+
+
+2008-09-22T01:44:31.000000Z
+4dbbc3e511d08a61bede455b28b66d75
+2008-07-27T05:46:52.190762Z
+527
+ctaylor
+
+ext_scaffold_generator.rb
+file
+
+
+
+
+2008-09-22T01:44:31.000000Z
+1699af3095ef1d3f031755fe9647bf7e
+2008-07-27T05:46:52.190762Z
+527
+ctaylor
+
+templates
+dir
+

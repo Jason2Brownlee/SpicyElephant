@@ -1,0 +1,32 @@
+<%
+# Expected: rs (OrderedHash), name, 
+# Optional: width, height
+
+# prep
+width = 250 if local_assigns[:width].nil?
+height = 100 if local_assigns[:height].nil?
+show_total = true if local_assigns[:show_total].nil?
+
+# prepare results and names
+result = ""
+labels = ""
+total = 0
+
+rs.each_with_index do |row, i|
+	result += "," if i != 0
+	labels += "|" if i != 0
+	labels += row[0].to_s
+	result += row[1].to_s
+	total += row[1].to_i
+end
+
+# prepare query string for pie graph
+qs =  "cht=p"
+qs += "&amp;chs=#{width}x#{height}"
+qs += "&amp;chd=t:#{result}"
+qs += "&amp;chl=#{labels}"
+qs += "&amp;chco=4d89f9"
+%>
+<h4><%= "Total #{total} " if show_total  %><%=name%></h4>
+<br/>
+<img src="http://chart.apis.google.com/chart?<%=qs%>" alt="<%=name%>" width="<%=width%>" height="<%=height%>" />

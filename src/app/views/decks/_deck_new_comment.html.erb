@@ -1,0 +1,17 @@
+<%
+# Expected: deck
+
+# prep the message
+message = deck.messages.build
+
+
+%>
+
+<% if logged_in? and deck.is_visible?(current_user) %>
+  <h4>write a comment</h4>
+	<% form_for([deck, message]) do |f| %>
+	  <%= f.error_messages %>
+	  <%= f.text_area :message, :rows => 3, :cols=>30 %>
+    <div style="text-align:right;margin-top:2px;"><%= f.submit "Submit" %></div>
+	<% end %>
+<% end %>

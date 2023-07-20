@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/!svn/ver/470/trunk/vendor/plugins/active_merchant/lib/active_merchant/billing/integrations/bogus
+END
+helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/!svn/ver/470/trunk/vendor/plugins/active_merchant/lib/active_merchant/billing/integrations/bogus/helper.rb
+END
+return.rb
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/!svn/ver/470/trunk/vendor/plugins/active_merchant/lib/active_merchant/billing/integrations/bogus/return.rb
+END
+notification.rb
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/!svn/ver/470/trunk/vendor/plugins/active_merchant/lib/active_merchant/billing/integrations/bogus/notification.rb
+END

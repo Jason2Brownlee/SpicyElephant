@@ -1,0 +1,54 @@
+<% title 'Admin' %>
+<h3><span>Admin: All Users</span></h3>
+
+<p class="intro_text">
+	<small>
+	A total of 
+	<em><%= User.count() %> users</em> have created
+	<em><%= Deck.count() %> decks</em> 
+	with <em><%= Card.count() %> cards</em>.
+	A total of <em><%= Curriculum.count() %> decks</em>
+	are currently being studied.
+	A total of
+	<em><%= Rumination.count() %> card revisions </em> 
+	have been performed across 
+	<em><%= StudySession.count() %> study sessions</em>.
+	</small>
+</p>
+
+<br/>
+<p class="intro_text">
+	<small>
+	A total of 
+	<em><%= User.count_subscribed_users %></em> 
+	users have premium accounts, and a total of 
+	<em><%= User.count_paid_subscribed_users %></em> 
+	users 
+	<em>(<%= ((User.count_paid_subscribed_users.to_f/User	.count.to_f)*100.0).round(2) %>%)</em>
+	have paid for their subscription.
+	</small>
+</p>
+<br/>
+<%= link_to "All users", users_path %> |
+<%= link_to "Premium users", users_path(:premium=>'true') %>
+<br/><br/>
+
+<table width="100%">
+  <tr>
+    <th>Username</th>
+    <th>Email</th>
+	<th>Preimum?</th>
+    <th>Enabled?</th>
+    <th>Roles</th>
+  </tr>
+    <%= render :partial => 'user', :collection => @users %>
+</table>
+
+
+<div class="apple_pagination">
+      <%= will_paginate @users, :container => false %>
+</div>
+<br>
+
+
+

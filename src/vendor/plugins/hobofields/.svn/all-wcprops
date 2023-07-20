@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/!svn/ver/4/trunk/vendor/plugins/hobofields
+END
+LICENSE.txt
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/!svn/ver/4/trunk/vendor/plugins/hobofields/LICENSE.txt
+END
+Rakefile
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/!svn/ver/4/trunk/vendor/plugins/hobofields/Rakefile
+END
+init.rb
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/!svn/ver/4/trunk/vendor/plugins/hobofields/init.rb
+END
+CHANGES.txt
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/!svn/ver/4/trunk/vendor/plugins/hobofields/CHANGES.txt
+END
+Manifest
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/!svn/ver/4/trunk/vendor/plugins/hobofields/Manifest
+END
+README.txt
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/!svn/ver/4/trunk/vendor/plugins/hobofields/README.txt
+END

@@ -1,0 +1,77 @@
+<% title "Feedback" %>
+
+<style>
+	#feedback ul { 
+	    /*giving blockquotes and lists room to breath*/ 
+	    margin:1em; 
+	} 
+	#feedback ul { 
+	    /*bringing lists on to the page with breathing room */ 
+	    margin-left:2em; 
+	} 
+	#feedback li { 
+	    /*giving OL's LIs generated numbers*/ 
+	    list-style: decimal outside;     
+	} 
+	#feedback li { 
+	    /*giving UL's LIs generated disc markers*/ 
+	    list-style: disc outside; 
+	} 
+</style>
+
+<h3><span>Feedback</span></h3>
+
+<p class="intro_text">
+We love feedback, please let us know what you think about <%= site_name %>.
+</p>
+
+<br/>
+
+<p class="intro_text">
+    <h4>Keep in Touch</h4>
+    <div id="feedback">
+        <ul>
+        	<li>
+    			<a href="http://getsatisfaction.com/spicyelephant/"><img alt="Favicon" src="http://www.getsatisfaction.com/favicon.gif" style="vertical-align: middle;" /></a> Get support or provide feedback at <a href="http://getsatisfaction.com/spicyelephant/"/>Get Satisfaction</a>
+    		</li>
+            <li>
+             Send us an email <%= mail_to 'support@spicyelephant.com' %>
+            </li>
+            <li>
+            Follow us on <a href="http://twitter.com/spicyelephant"/>Twitter</a>
+        	</li>
+        	<li>
+            Join us in a discussion of the site or learning and memory in general at our <%= link_to "Spicy Elephant Group", "http://groups.google.com/group/spicy-elephant" %>
+        	</li>
+        	<li>
+            Send us a message with the form below
+        	</li>
+        </ul>
+    </div>
+</p>
+
+
+<br/>
+
+<%=error_messages_for "feedback" %>
+<% form_tag :controller=>"home", :action=>"send_feedback_request" do %>
+<table>
+	<tr valign="top">
+		<td>Your Name:</td>
+		<td><%= text_field("feedback", "name") %></td>
+	</tr>
+	<tr valign="top">
+		<td>Your Email:</td>
+		<td><%= text_field("feedback", "email_address") %></td>
+	</tr>
+	<tr valign="top">
+		<td>Your Message:</td>
+		<td><%= text_area("feedback", "message", :rows => 10) %></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><%= submit_tag "Send Message" %></td>
+	</tr>
+</table>
+
+<%end%>

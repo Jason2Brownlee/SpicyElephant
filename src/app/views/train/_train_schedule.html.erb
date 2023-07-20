@@ -1,0 +1,96 @@
+<% 
+# working version of code for testing...
+calendar = []
+today = Time.zone.today
+working_date = DateTime.new(today.year, today.month, 1)
+
+32.times do	
+	c = Hash.new
+	c[:day] = working_date.day
+	c[:date] = working_date
+	c[:today] = (working_date == today)
+	c[:passed] = (working_date < today)
+	c[:in_month] = working_date.month == today.month
+	if c[:in_month]
+		if c[:today]
+			c[:scheduled] = current_user.cards_remaining
+		else
+			c[:scheduled] = SupermemoState.count_review_user_on_or_between_dates(current_user, nil, working_date)
+		end
+		# c[:studied] = current_user.ruminations.count(:conditions => ["date(ruminations.created_at)=date(?)", working_date])
+	else
+		c[:scheduled] = 0
+		# c[:studied] = 0
+	end
+	working_date = (working_date + 1)
+	calendar << c
+end
+%>
+
+<p class="intro_text">
+	Summary of your projected study schedule.
+</p>
+<br/>
+<table width="100%" class="month" cellpadding="0" cellspacing="0">
+  <tr>
+	<% (0..15).each do |index| %>
+    <% if !calendar[index][:in_month] %>
+    <td class="next_month"> </td>
+    <% else %>
+    <% if calendar[index][:today] %>
+      <td class="today">
+    <% elsif calendar[index][:passed] %>
+      <td class="passed">
+    <% else %>
+      <td>
+    <% end %>
+      <div>
+				<span class="date">
+					<%= calendar[index][:day] %>
+				</span>
+        <% if  calendar[index][:scheduled] > 0 and !calendar[index][:passed] %>
+        <span class="scheduled">
+          <%= calendar[index][:scheduled] %>
+        </span>
+        <% end %>
+			</div>
+		</td>			
+	<% end %>
+<% end %>
+  </tr>
+  <tr>
+	<% (16..31).each do |index| %>
+    <% if !calendar[index][:in_month] %>
+    <td class="next_month"> </td>
+    <% else %>
+    <% if calendar[index][:today] %>
+      <td class="today">
+    <% elsif calendar[index][:passed] %>
+      <td class="passed">
+    <% else %>
+      <td>
+    <% end %>
+      <div>
+				<span class="date">
+					<%= calendar[index][:day] %>
+				</span>
+        <% if  calendar[index][:scheduled] > 0 and !calendar[index][:passed] %>
+        <span class="scheduled">
+          <%= calendar[index][:scheduled] %>
+        </span>
+        <% end %>
+			</div>
+		</td>			
+	<% end %>
+<% end %>
+  </tr>
+</table>
+
+
+<br/>
+<p class="intro_text">
+	The date and time is <%= Time.zone.now.inspect %> 
+	(<%= link_to "change", edit_user_path(current_user) %>)
+</p>
+	
+

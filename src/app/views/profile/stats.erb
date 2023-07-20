@@ -1,0 +1,51 @@
+<% title "#{@user.login}'s Statistics" %>
+
+<p class="intro_text">
+<% if @view_self %>
+	Your statistics provide you with a summary of the state of you memory and study. 
+	<br/><%= link_to "Back to study", train_path %>
+<% else %>
+	You are viewing <%= user_link(@user) %>'s statistics.
+<% end %>
+</p>
+<br/>
+
+<h3><span>Overview</span></h3>
+<p class="intro_text">
+	An overview of all training to date.
+</p>
+<br/>
+<% if @user.total_cards>0 %>
+<table border="0" width="100%">
+	<tr valign="center" align="center">
+		<td>
+			<%= render :partial => "graph_pie", :locals => {:rs => @user.study_sessions.count(:all, :include => :study_mode, :group => "study_modes.name"), :name => "Study Sessions"} %>
+		</td>
+		<td>
+			<%= render :partial => "graph_pie", :locals => {:rs => @user.ruminations.count(:all, :include => :rumination_result, :group => "rumination_results.name"), :name => "Rumination Results"} %>
+		</td>
+		<td>
+			<%= render :partial => "graph_pie", :locals => {:rs => @user.current_supermemo_ruminations.count(:all, :include => :rumination_result, :group => "rumination_results.name"), :name => "Current Curriculum Results", :show_total => false} %>
+		</td>
+	</tr>
+</table>
+<% end %>
+
+<h3><span>Training Statistics</span></h3>
+<p class="intro_text">
+	Training activity over time.
+</p>
+<div align="center">
+	<%= render :partial => "graph_result_thismonth", :locals => {:user => @user} %>
+</div>
+<br/>
+<table border="0" width="100%">
+	<tr valign="center" align="center">
+		<td>
+			<%= render :partial => "graph_result_sixmonths", :locals => {:user => @user} %>
+		</td>
+		<td>
+		</td>
+	</tr>
+</table>
+

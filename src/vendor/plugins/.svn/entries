@@ -1,0 +1,74 @@
+8
+
+dir
+740
+http://svn.spicyelephant.com/trunk/vendor/plugins
+http://svn.spicyelephant.com
+
+
+
+2008-09-20T04:37:24.736052Z
+630
+craig
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+b44e13de-d91c-40e6-bcb6-fc5b3c2c1b1a
+
+will_paginate
+dir
+
+exiguous_format
+dir
+
+tiny_mce_gzip
+dir
+
+ext_scaffold
+dir
+
+restful_authentication
+dir
+
+hobosupport
+dir
+
+jrails
+dir
+
+toland-app_version
+dir
+
+
+
+delete
+
+xss_terminate
+dir
+
+active_merchant
+dir
+
+open_id_authentication
+dir
+
+action_mailer_optional_tls
+dir
+
+hobofields
+dir
+
+navigation_helper
+dir
+

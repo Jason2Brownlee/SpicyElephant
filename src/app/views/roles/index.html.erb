@@ -1,0 +1,11 @@
+<h3><span>Admin: Roles for <%=h @user.login.capitalize %></span></h3>
+
+<%= link_to "Back to users", users_path %>
+
+<h4>Roles assigned:</h4>
+<ul><%= render :partial => 'role', :collection => @user.roles %></ul>
+  
+<h4>Roles available:</h4>
+<ul><%= render :partial => 'role', :collection => (@all_roles - @user.roles) %></ul>
+
+

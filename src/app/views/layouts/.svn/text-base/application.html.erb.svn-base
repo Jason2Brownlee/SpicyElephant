@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  
+    <head>
+      <%= render :partial => "layouts/havana_instrumentation" %>
+      <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+      <meta http-equiv="content-language" content="en" />
+      <%= yield :metadata %>
+
+      <link rel="search" type="application/opensearchdescription+xml" href="/deck-search.xml" title="SpicyElephant Search" />
+      <link rel="icon" href="/images/favicon.ico" />
+
+      <title><%= yield(:title) || controller.action_name %></title>
+      <%= stylesheet_link_tag 'main', :cache => 'all' %>
+      <%= yield :stylesheet %>
+
+      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+      
+      <%= yield :script %>        
+    </head>
+    
+    <body class="<%=  controller.class.name %>">
+      <div class="header_wrapper">
+        <%= render :partial => "layouts/header" %>
+      </div>
+      
+        <div class="content_wrapper">
+            <div class="content">
+              <div id="message">
+                <%= render :partial => "layouts/message" %>
+              </div>
+              <%= yield %>
+              <% if logged_in? && !current_user.has_subscribed_role? && !(controller.controller_name == 'payments') and !(controller.controller_name == 'home') %>
+                <p>
+                  Have we helped you put stuff in your brain? 
+                  <%= link_to 'Upgrade to Premium', upgrade_path %> and 
+                  support Spicy Elephant.
+                </p>
+              <% end %>
+            </div>
+
+            <div class="footer">
+                <%= render :partial => "layouts/footer" %>
+            </div>
+        </div>
+        <!-- late script loading -->
+        <div id="yield-late-js">
+            <%= yield :late_script %>
+        </div>
+        <div id="google-analytics">
+            <%= render :partial => "layouts/google_analytics" %>
+        </div>
+    </body>
+</html>

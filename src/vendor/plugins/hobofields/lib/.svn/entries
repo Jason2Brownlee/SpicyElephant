@@ -1,0 +1,55 @@
+8
+
+dir
+740
+http://svn.spicyelephant.com/trunk/vendor/plugins/hobofields/lib
+http://svn.spicyelephant.com
+
+
+
+2008-07-08T12:05:53.181599Z
+1
+root
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+b44e13de-d91c-40e6-bcb6-fc5b3c2c1b1a
+
+hobo_fields.rb
+file
+
+
+
+
+2008-09-22T01:44:45.000000Z
+516cfcef3e93dca709264597e65bb6a0
+2008-07-08T12:05:53.181599Z
+1
+root
+
+hobofields.rb
+file
+
+
+
+
+2008-09-22T01:44:45.000000Z
+f2971203406fe2c7276792e759c1f569
+2008-07-08T12:05:53.181599Z
+1
+root
+
+hobo_fields
+dir
+

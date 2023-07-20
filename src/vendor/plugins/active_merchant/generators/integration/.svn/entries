@@ -1,0 +1,55 @@
+8
+
+dir
+740
+http://svn.spicyelephant.com/trunk/vendor/plugins/active_merchant/generators/integration
+http://svn.spicyelephant.com
+
+
+
+2008-07-24T05:48:53.504257Z
+470
+craig
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+b44e13de-d91c-40e6-bcb6-fc5b3c2c1b1a
+
+USAGE
+file
+
+
+
+
+2008-09-22T01:44:43.000000Z
+bb050ae7bf9504137f628e21d037a6a3
+2008-07-24T05:48:53.504257Z
+470
+craig
+
+integration_generator.rb
+file
+
+
+
+
+2008-09-22T01:44:43.000000Z
+4127c05f5ba8fcd56c4844f5b0f3ff65
+2008-07-24T05:48:53.504257Z
+470
+craig
+
+templates
+dir
+

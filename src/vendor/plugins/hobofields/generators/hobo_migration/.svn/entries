@@ -1,0 +1,43 @@
+8
+
+dir
+740
+http://svn.spicyelephant.com/trunk/vendor/plugins/hobofields/generators/hobo_migration
+http://svn.spicyelephant.com
+
+
+
+2008-07-08T12:05:53.181599Z
+1
+root
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+b44e13de-d91c-40e6-bcb6-fc5b3c2c1b1a
+
+hobo_migration_generator.rb
+file
+
+
+
+
+2008-09-22T01:44:45.000000Z
+045cb913f5f2eb7d57d8ec653b43d7f0
+2008-07-08T12:05:53.181599Z
+1
+root
+
+templates
+dir
+

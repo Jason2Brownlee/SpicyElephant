@@ -1,0 +1,61 @@
+8
+
+dir
+740
+http://svn.spicyelephant.com/trunk/vendor/plugins/active_merchant/test
+http://svn.spicyelephant.com
+
+
+
+2008-07-24T05:48:53.504257Z
+470
+craig
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+b44e13de-d91c-40e6-bcb6-fc5b3c2c1b1a
+
+unit
+dir
+
+test_helper.rb
+file
+
+
+
+
+2008-09-22T01:44:36.000000Z
+a4c9739c23e9a73975d9ebddba519e29
+2008-07-24T05:48:53.504257Z
+470
+craig
+
+extra
+dir
+
+fixtures.yml
+file
+
+
+
+
+2008-09-22T01:44:36.000000Z
+ebc9038059a6673ecf37406d7f8f92d3
+2008-07-24T05:48:53.504257Z
+470
+craig
+
+remote
+dir
+

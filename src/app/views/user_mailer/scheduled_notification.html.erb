@@ -1,0 +1,19 @@
+
+<% if @cards_review_count > 0 %>
+You have <%= @cards_review_count %> scheduled cards to study today.
+
+Go to <%= @train_url %> now, to complete your scheduled studies.
+<% end %>
+<% if @message_count > 0 %>
+You have <%= @message_count %> messages that have been posted on your decks since last visit.
+<% end %>
+-----------------------------------------------------------------------
+
+Please don't hesitate to contact support@spicyelephant.com if you have any questions.
+
+Best regards,
+
+The Spicy Elephant Team
+
+------------------------------------------------------------------------
+To unsubscribe from this email go to <%= @unsubscribe_url %> and change your notification preferences.

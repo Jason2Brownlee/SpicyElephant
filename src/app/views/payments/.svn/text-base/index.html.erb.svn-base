@@ -1,0 +1,61 @@
+<% title ('Upgrade Account') %>
+<h3>Upgrade to a Premium account</h3>
+
+<div class="order-form">
+<table id="order-table" class="deck_list" cellpadding="0" cellspacing="0" width="100%">
+<thead>
+<tr>
+  <th width="63%">Buy:</th>
+  <th width="22%">How long?</th>
+  <th width="8%">Price (US$)</th>
+</tr>
+</thead>
+<tbody>
+<tr id="upgrade-line" style="display: none;">
+  <td class="own"><a id="upgrade-your-account" href="?nojs=1&amp;add=own">Upgrade your account...</a></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr id="own-line" style="">
+  <td class="user">Premium account (<%= current_user.login%>)<br><div class="expire"><!--(Account will expire on July 29th, 2009)--></div></td>
+  <td class="length">lifetime</td>
+  <td class="price">$20.00</td>
+</tr>
+
+</tbody>
+</table>
+
+
+<div class="order-summary">
+   <%= form_tag checkout_path %>
+  <b>Total: US$20.00</b>
+  <br /><br />
+
+  <noscript>
+  <!--<div class="terms">By proceeding with payment, you agree to the <a href="">Terms &amp; Conditions</a>.</div>-->
+  </noscript>
+  <!--<div class="terms" id="terms"><input id="tc" name="tc" type="checkbox"><label for="tc">&nbsp;&nbsp;I have read and accept the  <a id="terms-link" href="">Terms &amp; Conditions</a>.</label> </div>-->
+
+  <%= submit_tag 'Continue with Payment' %>
+<br /><br />
+</div> <!-- /order-summary -->
+</div> <!-- /order-form -->
+
+
+
+
+<br />
+<h3>Payment Information</h3>
+<p class="pay-methods"><img src="/images/pay_visa.gif" width="37" height="23" alt="Visa" /> <img src="/images/pay_mastercard.gif" width="37" height="23" alt="Mastercard" /> <img src="/images/pay_discover.gif" width="36" height="23" alt="Discover" /> <img src="/images/pay_amex.gif" width="38" height="23" alt="American Express" /></p>
+<br />
+<p class="pay-methods-list"><b>You can pay by Visa, Mastercard, Discover, Amex, or PayPal.</b></p>
+
+<p>All payments are processed by PayPal, but you <b>don&#039;t</b> have to be a PayPal member to pay with a credit card.</p>
+<br />
+<p>If you have any payment questions? Please <%= link_to 'contact us', feedback_path %></p>
+
+
+
+
+&nbsp;
+

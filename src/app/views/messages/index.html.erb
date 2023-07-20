@@ -1,0 +1,48 @@
+<% title (@deck.name + ' : Messages') %>
+<h3><span>
+<%= @deck.name %> : Messages
+</span></h3>
+<br class="clear" />
+
+<% if logged_in? and @deck.is_visible?(current_user) %>
+	<% form_for([@deck, @message]) do |f| %>
+	  <%= f.error_messages %>
+	
+	      <%= f.text_area :message, :rows => 4, :cols => 80 %>
+	<p>
+	    <%= f.submit "Post Message" %> or <%= link_to 'Back to Deck', @deck %>
+	</p>
+	<% end %>
+<% end %>
+
+<br>
+<hr>
+	<div clas="page_info">
+		<%= page_entries_info @messages %>
+	</div>
+<hr>
+<table class="deck_list"  border="0" cellpadding="4" cellspacing="0" width="100%">
+
+<% for message in @messages %>
+<tr>
+	<td width="5%">
+	<%= avatar_tag(message.user, :size => 25) %>
+	</td>
+    <td class="deck_info">
+    	<small style="font-size: 10px; background: #F1F1F1; padding: 1px;">posted by 
+		<%= user_link(message.user) %>
+		<%=  time_distance_or_time_stamp(message.created_at) %></small><br>
+      <%=  message.message %>
+    </td>
+</tr>
+  
+<% end %>
+</table>
+
+<br />
+
+<br/>
+<div class="apple_pagination">
+	<%= will_paginate @decks, :container => false %>
+</div>
+<br>

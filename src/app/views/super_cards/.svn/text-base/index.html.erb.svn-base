@@ -1,0 +1,9 @@
+<div id="super_card-grid"></div>
+<%= ext_datastore_for :super_card %>
+<% javascript_tag do -%>
+  var super_card_column_model = new Ext.grid.ColumnModel([
+    {id: 'id', header: "#", width: 20, dataIndex: 'id'},
+
+  ]);
+<% end -%>
+<%= ext_grid_for :super_card, :element => 'super_card-grid' %>

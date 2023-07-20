@@ -1,0 +1,75 @@
+<% title train_tab_title %>
+
+<% content_for :late_script do %>
+<script type="text/javascript">
+function show_options(node) {
+  do {
+    node = node.parentNode;
+  }
+  while(node.className != 'button');
+  
+  node.className = 'button expanded';
+  return false;
+}
+function hide_options(node) {
+  do {
+    node = node.parentNode;
+  }
+  while(node.className != 'button expanded');
+  
+  node.className = 'button';
+  return false;
+}
+</script>
+<% end %>
+
+<% if !current_user.curriculum_decks.empty? %>
+<div class="section">
+            <p class="intro_text">
+                <%= link_to avatar_tag(current_user, :size => 30, :default => 'identicon'), current_user %>
+                &nbsp;<span style="font-size:40px"><em><%= current_user.retention_percentage.round %>%</em></span>
+                Retention
+            </p>
+            <p class="intro_text">
+                Across <em><%= current_user.study_sessions.count %></em>
+                study sessions
+                and <em><%= current_user.ruminations.count %></em>
+                study results.
+            </p>
+
+            <div class="button">
+              <div class="left"><div class="top"> </div></div>
+              <%= link_to "view statistics", @view_self ? stats_path : stats_user_path(current_user), :class => 'button_content' %>
+              <div class="right"><div class="top"> </div></div>
+            </div>
+						
+
+
+	
+      <br class="clear" />
+
+</div>
+<center>
+<%= render :partial => "/layouts/google_adsense" %>
+</center>
+<div class="section">
+	<h3>Decks you're studying</h3>
+  <%= render :partial => "train_now", 
+		:locals => {:study_mode => @study_mode, :cards_remaining => @cards_remaining, :cards_total => @cards_total} %>
+
+	<%= render :partial => "train_decks", :locals => {:study_mode => @study_mode } %>
+<% if !current_user.can_add_to_curriculum? %>
+    <div class="alert">
+      <div class="left"><div class="top"> </div></div>
+        <%= link_to "Your account doesn't allow more decks to be added. Upgrade to a premium account today to study as many decks as you want.", upgrade_path %>
+      <div class="right"><div class="top"> </div></div>
+    </div> 
+    <% end %>
+</div>
+<div class="section">  
+	<h3>Study schedule</h3>
+	<%= render :partial => "train_schedule" %>
+<% end %>
+</div>
+
+

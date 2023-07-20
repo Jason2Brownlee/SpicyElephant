@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/!svn/ver/729/trunk/app/views/layouts
+END
+_footer.erb
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/!svn/ver/721/trunk/app/views/layouts/_footer.erb
+END
+_google_adsense.erb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/729/trunk/app/views/layouts/_google_adsense.erb
+END
+_havana_instrumentation.erb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/723/trunk/app/views/layouts/_havana_instrumentation.erb
+END
+_google_analytics.erb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/!svn/ver/726/trunk/app/views/layouts/_google_analytics.erb
+END
+_message.erb
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/!svn/ver/627/trunk/app/views/layouts/_message.erb
+END
+application.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/!svn/ver/717/trunk/app/views/layouts/application.html.erb
+END
+_header.erb
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/!svn/ver/684/trunk/app/views/layouts/_header.erb
+END

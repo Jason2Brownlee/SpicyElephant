@@ -1,0 +1,29 @@
+<%
+# Expected: user, name, results, labels
+
+width = 250 if local_assigns[:width].nil?
+height = 100 if local_assigns[:height].nil?
+colors = "edb622" if local_assigns[:colors].nil?
+col_width = nil if local_assigns[:col_width].nil?
+ledgend = nil if local_assigns[:ledgend].nil?
+max_value = 50 if local_assigns[:max_value].nil?
+
+# nice auto scale
+max_value = (((max_value/10.0).ceil)*10.0).round
+max_value = 10 if max_value <= 0
+
+# prepare query string
+qs =  "cht=bvs"
+qs += "&amp;chxt=x,y"
+qs += "&amp;chds=0,#{max_value}"
+qs += "&amp;chxr=1,0,#{max_value}"
+qs += "&amp;chbh=#{col_width}" if !col_width.nil?
+qs += "&amp;chs=#{width}x#{height}"
+qs += "&amp;chd=t:#{results}"
+qs += "&amp;chl=#{labels}"
+qs += "&amp;chdl=#{ledgend}" if !ledgend.nil?
+qs += "&amp;chco=#{colors}"
+%>
+<h4><%=name%></h4>
+<br/>
+<img src="http://chart.apis.google.com/chart?<%=qs%>" alt="<%=name%>" width="<%=width%>" height="<%=height%>" />

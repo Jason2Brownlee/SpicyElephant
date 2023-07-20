@@ -1,0 +1,115 @@
+8
+
+dir
+740
+http://svn.spicyelephant.com/trunk/vendor/plugins/hobofields
+http://svn.spicyelephant.com
+
+
+
+2008-07-08T12:05:53.181599Z
+1
+root
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+b44e13de-d91c-40e6-bcb6-fc5b3c2c1b1a
+
+test
+dir
+
+LICENSE.txt
+file
+
+
+
+
+2008-09-22T01:44:45.000000Z
+9fd97927365995d04d87deeb26d58af1
+2008-07-08T12:05:53.181599Z
+1
+root
+
+Rakefile
+file
+
+
+
+
+2008-09-22T01:44:45.000000Z
+e67ba121fbccf79559e1f88239b8cf6e
+2008-07-08T12:05:53.181599Z
+1
+root
+
+rails_generators
+dir
+
+script
+dir
+
+init.rb
+file
+
+
+
+
+2008-09-22T01:44:45.000000Z
+63a5ef7c554a0556a79705e9a7ddb00b
+2008-07-08T12:05:53.181599Z
+1
+root
+
+lib
+dir
+
+CHANGES.txt
+file
+
+
+
+
+2008-09-22T01:44:45.000000Z
+1948d32948a929237039568731b62206
+2008-07-08T12:05:53.181599Z
+1
+root
+
+Manifest
+file
+
+
+
+
+2008-09-22T01:44:45.000000Z
+808afd1e79f03b2564958dc999f7e3a3
+2008-07-08T12:05:53.181599Z
+1
+root
+
+generators
+dir
+
+README.txt
+file
+
+
+
+
+2008-09-22T01:44:45.000000Z
+95a17acb5ccb74c491890fa3ec9ca479
+2008-07-08T12:05:53.181599Z
+1
+root
+

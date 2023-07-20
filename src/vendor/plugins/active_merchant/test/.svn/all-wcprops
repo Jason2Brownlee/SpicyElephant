@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/!svn/ver/470/trunk/vendor/plugins/active_merchant/test
+END
+test_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/470/trunk/vendor/plugins/active_merchant/test/test_helper.rb
+END
+fixtures.yml
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/470/trunk/vendor/plugins/active_merchant/test/fixtures.yml
+END

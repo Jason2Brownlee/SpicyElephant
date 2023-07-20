@@ -1,0 +1,56 @@
+<div class="head">   
+
+  <% if logged_in? %>
+    <div class="profile">
+      <h2>
+        Hello <%= current_user.login %>
+        <% if current_user.has_subscribed_role?  %>
+          <%= image_tag 'ico_premium.png', :alt=>'premium account' %>
+          
+          
+        <% end %>
+      </h2>
+      <div class="profile_links"><%= link_to 'profile settings', current_user %></div>
+      <div class="extra_links">
+        <% if current_user.has_administrator_role?  %>
+          <%= link_to 'admin', users_path %> |
+        <% end %>
+        <%= link_to 'log out', logout_url %> |
+        <%= link_to 'help', help_path %>
+      </div>
+    </div>
+    <% form_tag search_path, :method => 'get', :class=> 'search' do %>
+      <%= text_field_tag :search, params[:search], :size => 15 %>
+    <div class="button">
+      <div class="left"><div class="top"> </div></div>
+      <%= submit_tag "search", :name => nil, :class => 'button_content' %>
+      <div class="right"><div class="top"> </div></div>
+    </div> 
+    <% end %>
+  <% else %>    
+    <h2> Hello Stranger</h2>
+    <div class="profile_links">
+      <%= link_to 'Sign In', new_session_path %> or
+      <%= link_to 'Register', new_user_path %>
+    </div>
+    <div class="extra_links">
+      <%= link_to 'Help', help_path %>
+    </div>
+    <% form_tag search_path, :method => 'get', :class=> 'search' do %>
+      <%= text_field_tag :search, params[:search], :size => 15 %>
+    <div class="button">
+      <div class="left"><div class="top"> </div></div>
+      <%= submit_tag "search", :name => nil, :class => 'button_content' %>
+      <div class="right"><div class="top"> </div></div>
+    </div> 
+    <% end %>
+  <% end %>
+</div>
+    <ul class="nav_bar">
+      <li class="HomeController <%= "current" if controller.class.name == "HomeController" %>"><a href="/home" title="home">home</a></li>
+      <li class="DecksController <%= "current" if controller.class.name == "DecksController" %>"><a href="/decks" title="explore">explore</a></li>
+      <% if logged_in? %>
+        <li class="ProfileController <%= "current" if controller.class.name == "ProfileController" %>"><a href="/profile" title="manage">manage</a></li>
+        <li class="TrainController <%= "current" if controller.class.name == "TrainController" %>"><a href="/train" title="study">study</a></li>
+      <% end %>
+   </ul>

@@ -1,0 +1,34 @@
+<%
+# Expected parameters: study_mode, cards_remaining, cards_total
+%>
+
+<% if cards_total == 0 %>
+	<p class="intro_text">
+		You have no cards to train, please go to your <%= link_to "profile", profile_path %> to add decks to your curriculum.
+	</p>
+<% else %>
+
+					<% if cards_remaining > 0%>
+<p class="intro_text">
+						You have <em><%= count_cards(cards_remaining) %></em> scheduled to study. Estimated to take <%= estimated_time_to_study(cards_remaining) %>
+          </p>						
+
+    <div class="button">
+      <div class="left"><div class="top"> </div></div>
+        <%= link_to "study all now", train_ruminate_all_start_path(:study_mode=>study_mode, :format => 'html'), :class => 'button_content' %>
+      <div class="right"><div class="top"> </div></div>
+    </div>
+							<br class="clear" /><br />
+					<% else %>
+					<p>You have no scheduled cards for training right now. 
+					<%= link_to "Explore", decks_path %> for more decks, 
+					or review one of your current decks.
+          </p>
+					<% end %>
+
+
+        <!--
+				<%= render :partial => "study_graph", :locals => {:cards_remaining => cards_remaining, :cards_total => cards_total} %>
+        -->
+<% end %>
+

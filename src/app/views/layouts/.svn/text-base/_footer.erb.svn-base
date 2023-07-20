@@ -1,0 +1,10 @@
+<center>
+    <h1><%= link_to image_tag("logo.png", :alt => "spicy elephant", :size => "112x30"), root_path %></h1>
+    &copy;2008 <%= link_to "m(<em>m</em>)", 'http://www.mayhemmethod.com' %> - <%= link_to 'Terms', terms_path %> - <%= link_to 'Privacy', privacy_path %> - <%= link_to 'Feedback', feedback_path %>
+    <br/>
+    <% if logged_in? %>
+	    <% if current_user.has_administrator_role? %>
+	    Version <%= APP_VERSION.to_s %>
+	    <% end %>
+    <% end %>
+</center>

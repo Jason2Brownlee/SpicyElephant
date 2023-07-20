@@ -1,0 +1,37 @@
+<%
+	# Expected: cards_total, cards_remaining
+	
+	# Optional:
+	size_small = false if local_assigns[:size_small].nil?
+	
+	
+	if(size_small)
+		size = "80x80"
+	else
+		size = "200x100"
+	end
+	
+	finished = (cards_total-cards_remaining)
+	per = (finished.to_f/cards_total.to_f)*100
+
+	
+	qs = "chs=#{size}&amp;chd=t:#{per}&amp;cht=gom"
+	# if !size_small
+	# 	qs += "&amp;chl=Studied"
+	# end
+%>
+	<img src="http://chart.apis.google.com/chart?<%= qs %>" alt="Scheduled Cards" 
+	<% if (size_small) %>
+		width="80" height="80"
+	<% else %>
+		width="200" height="100"
+	<% end %>
+	/>
+<br/>
+<small style="font-size:10px;">
+<% if cards_remaining > 0 %>
+	(<%= count_cards(cards_remaining) %> to study)
+<% else %>
+	(no cards)
+<% end %>
+</small>

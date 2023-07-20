@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 29
+/!svn/ver/656/trunk/test/unit
+END
+user_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/!svn/ver/648/trunk/test/unit/user_test.rb
+END
+activitie_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/!svn/ver/189/trunk/test/unit/activitie_test.rb
+END
+role_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/!svn/ver/4/trunk/test/unit/role_test.rb
+END
+message_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/!svn/ver/345/trunk/test/unit/message_test.rb
+END
+subscription_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/!svn/ver/490/trunk/test/unit/subscription_test.rb
+END
+rumination_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/!svn/ver/4/trunk/test/unit/rumination_test.rb
+END
+deck_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/!svn/ver/656/trunk/test/unit/deck_test.rb
+END
+user_mailer_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/!svn/ver/648/trunk/test/unit/user_mailer_test.rb
+END
+permission_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/!svn/ver/4/trunk/test/unit/permission_test.rb
+END
+card_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/!svn/ver/656/trunk/test/unit/card_test.rb
+END
+curriculum_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/!svn/ver/4/trunk/test/unit/curriculum_test.rb
+END
+study_session_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/!svn/ver/182/trunk/test/unit/study_session_test.rb
+END
+study_mode_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/!svn/ver/182/trunk/test/unit/study_mode_test.rb
+END
+feedback_mailer_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/!svn/ver/55/trunk/test/unit/feedback_mailer_test.rb
+END

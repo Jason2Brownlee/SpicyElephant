@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/!svn/ver/730/trunk/app/views/decks
+END
+_deck.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/!svn/ver/699/trunk/app/views/decks/_deck.html.erb
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/!svn/ver/608/trunk/app/views/decks/edit.html.erb
+END
+_deck_users.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/!svn/ver/666/trunk/app/views/decks/_deck_users.html.erb
+END
+subscribers.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/!svn/ver/666/trunk/app/views/decks/subscribers.html.erb
+END
+_deck_comment.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/!svn/ver/666/trunk/app/views/decks/_deck_comment.html.erb
+END
+_deck_popular.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/!svn/ver/514/trunk/app/views/decks/_deck_popular.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/!svn/ver/730/trunk/app/views/decks/index.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/!svn/ver/420/trunk/app/views/decks/new.html.erb
+END
+recommend.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/!svn/ver/698/trunk/app/views/decks/recommend.html.erb
+END
+_deck_new_comment.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/666/trunk/app/views/decks/_deck_new_comment.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/!svn/ver/698/trunk/app/views/decks/show.html.erb
+END
+_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/!svn/ver/449/trunk/app/views/decks/_form.html.erb
+END

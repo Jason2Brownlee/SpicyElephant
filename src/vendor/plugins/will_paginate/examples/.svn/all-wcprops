@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/193/trunk/vendor/plugins/will_paginate/examples
+END
+pagination.css
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/4/trunk/vendor/plugins/will_paginate/examples/pagination.css
+END
+pagination.sass
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/4/trunk/vendor/plugins/will_paginate/examples/pagination.sass
+END
+index.haml
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/4/trunk/vendor/plugins/will_paginate/examples/index.haml
+END
+index.html
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/4/trunk/vendor/plugins/will_paginate/examples/index.html
+END

@@ -1,0 +1,49 @@
+8
+
+dir
+740
+http://svn.spicyelephant.com/trunk/vendor/plugins/ext_scaffold/lib/ext_scaffold_core_extensions
+http://svn.spicyelephant.com
+
+
+
+2008-07-27T05:46:52.190762Z
+527
+ctaylor
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+b44e13de-d91c-40e6-bcb6-fc5b3c2c1b1a
+
+action_controller
+dir
+
+array.rb
+file
+
+
+
+
+2008-09-22T01:44:30.000000Z
+92fdb217167a64a5727549cde919cbf4
+2008-07-27T05:46:52.190762Z
+527
+ctaylor
+
+action_view
+dir
+
+active_record
+dir
+

@@ -1,0 +1,26 @@
+<% title "explore decks" %>
+
+<center>
+<%= render :partial => "/layouts/google_adsense" %>
+</center>
+	<p class="intro_text">
+		Browse decks by: 
+		<em><%= link_to_unless @order == 'popular', "popularity", decks_path( :order => :popular, :direction => 'ASC' )%></em> |
+		<em><%= link_to_unless @order == 'name', "name", decks_path( :order => :name, :direction => 'ASC' ) %></em>  |
+		<em><%= link_to_unless @order == 'created_at', "date created", decks_path( :order => :created_at, :direction => 'DESC' ) %></em> 
+	</p>
+
+
+<% if @decks.nil? or @decks.empty? %>
+	No decks.
+<% else %>
+	<table class="deck_list" cellpadding="0" cellspacing="0" width="100%">	
+		<%= render :partial => @decks, :locals => {:show_meta => true} %>
+	</table>
+<% end %>
+
+<br/>
+<div class="apple_pagination">
+	<%= will_paginate @decks, :container => false %>
+</div>
+<br>

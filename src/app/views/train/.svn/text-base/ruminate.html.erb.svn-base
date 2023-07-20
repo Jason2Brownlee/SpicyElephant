@@ -1,0 +1,46 @@
+<% content_for :stylesheet do %>
+<%= stylesheet_link_tag "ruminate" %>
+<% end %>
+<% content_for :script do %>
+<script type="text/javascript" src="http://yui.yahooapis.com/2.6.0/build/yahoo-dom-event/yahoo-dom-event.js"></script>
+<% end %>
+<% content_for :late_script do %>
+<%= javascript_include_tag 'jrails', 'ruminate', :cache => 'runimate-c' %><% end %>
+<% card = @cards.first %>
+<% title "Training - #{card.deck.name}" %>
+<center>
+<p class="intro_text" style="text-align:center;">
+    <% if !@study_session.study_mode.is_review? %>
+    Studying scheduled card from<% else %>
+    Reviewing all cards from<% end %>
+    <span id="deck_name"><% if @deck.nil? %>
+    curriculum<% else %><%= card.deck.name %><% end %></span>,
+  <em><span id="cards_remaining_count"><%= count_cards(@cards_remaining) %></span> remaining</em>. <%= link_to "Finish", train_finish_path(:study_session => @study_session, :deck => @deck) %>
+</p>
+<div id="question_text" class="question_text">
+    <%= card.question -%>
+</div>
+<!-- render :partial => "/layouts/google_adsense" -->
+<div id="flashcard" class="flashcard">
+    <div id="question" class="cardWrapper_outer">		
+        <div class="cardWrapper_inner">
+            <div class="cardContent_outer">
+                <div id="answer_text" class="answer_text">
+                    <%= card.answer -%>
+                </div>
+                <div id="flipcard" class="flipcard">
+					
+                    Click or [SPACE] to show
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="buttons_panel" class="buttons_panel">
+        <%= render :partial => "ruminate_buttons" %>
+    </div>
+    <div id="result_flash" class="result_flash">
+    </div>
+</div>
+</center>
+
+<br /><br />

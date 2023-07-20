@@ -1,0 +1,46 @@
+<%
+edit_mode = false if local_assigns[:edit_mode].nil?
+%>
+
+	<%= javascript_include_tag("tiny_mce/tiny_mce") %>
+	<%= javascript_include_tag("tiny_mce_deck_init") %>
+	
+	<fieldset class="inlineLabels">
+		
+	<legend></legend>
+	<div class="ctrlHolder">
+	    <!--<%= f.label :name %>-->
+		<label for="name"><em>*</em>Deck Name</label>
+	    <%= f.text_field :name %>
+  	</div>
+
+	<div class="ctrlHolder">
+	    <!--<%= f.label :description %>-->
+		<label for="description"><em>*</em>Deck Description</label>
+	    <%= f.text_area :description %>
+  	</div>
+	
+<% if !edit_mode %>
+	<div class="ctrlHolder">
+	  <p class="label">Deck Visibility</p>
+	  	<label for="visibility" class="inlineLabel">
+		<%= f.radio_button :visibility, "public", :disabled => false %> 
+		Public</label>
+	  	<label for="visibility" class="inlineLabel">
+		<%= f.radio_button :visibility, "private", :disabled => !current_user.has_subscribed_role? %> 
+		Private</label>
+		<br/>
+		<p class="formHint">
+			<small style="font-size:10px;">
+				<% if current_user.has_subscribed_role? %>
+				* Note that private decks are only accessible to yourself,
+				 and visibility cannot be changed after deck creation.
+				<% else %>
+				To enable private decks, subscribe to a premium account now!
+				<% end %>
+			</small>
+		</p>
+	</div>
+<% end %>
+
+<br/>

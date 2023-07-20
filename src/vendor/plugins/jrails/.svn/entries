@@ -1,0 +1,85 @@
+8
+
+dir
+740
+http://svn.spicyelephant.com/trunk/vendor/plugins/jrails
+http://svn.spicyelephant.com
+
+
+
+2008-09-20T04:37:24.736052Z
+630
+craig
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+b44e13de-d91c-40e6-bcb6-fc5b3c2c1b1a
+
+tasks
+dir
+
+init.rb
+file
+
+
+
+
+2008-09-22T01:44:32.000000Z
+205ec92a0189f469996a595fc850ac4b
+2008-09-20T04:37:24.736052Z
+630
+craig
+
+lib
+dir
+
+CHANGELOG
+file
+
+
+
+
+2008-09-22T01:44:32.000000Z
+fa72f4b8e7661983d2ce39f3b9eedca8
+2008-09-20T04:37:24.736052Z
+630
+craig
+
+install.rb
+file
+
+
+
+
+2008-09-22T01:44:32.000000Z
+d18f3ec8916a5bdb85974499c4707fc3
+2008-09-20T04:37:24.736052Z
+630
+craig
+
+javascripts
+dir
+
+README
+file
+
+
+
+
+2008-09-22T01:44:32.000000Z
+6990fc9faa7964fd100467818d8f2154
+2008-09-20T04:37:24.736052Z
+630
+craig
+

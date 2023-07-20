@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/!svn/ver/294/trunk/vendor/plugins/xss_terminate/test/models
+END
+entry.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/294/trunk/vendor/plugins/xss_terminate/test/models/entry.rb
+END
+review.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/294/trunk/vendor/plugins/xss_terminate/test/models/review.rb
+END
+comment.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/294/trunk/vendor/plugins/xss_terminate/test/models/comment.rb
+END
+message.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/294/trunk/vendor/plugins/xss_terminate/test/models/message.rb
+END
+person.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/294/trunk/vendor/plugins/xss_terminate/test/models/person.rb
+END

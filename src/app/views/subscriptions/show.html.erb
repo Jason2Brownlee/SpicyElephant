@@ -1,0 +1,28 @@
+<p>
+  <b>User:</b>
+  <%=h @subscription.user %>
+</p>
+
+<p>
+  <b>Start subscription at:</b>
+  <%=h @subscription.start_subscription_at %>
+</p>
+
+<p>
+  <b>End subscription at:</b>
+  <%=h @subscription.end_subscription_at %>
+</p>
+
+<p>
+  <b>Transcation:</b>
+  <%=h @subscription.transcation %>
+</p>
+
+<p>
+  <b>Created at:</b>
+  <%=h @subscription.created_at %>
+</p>
+
+
+<%= link_to 'Edit', edit_subscription_path(@subscription) %> |
+<%= link_to 'Back', subscriptions_path %>

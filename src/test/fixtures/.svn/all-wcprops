@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 33
+/!svn/ver/659/trunk/test/fixtures
+END
+roles.yml
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/!svn/ver/657/trunk/test/fixtures/roles.yml
+END
+decks.yml
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/!svn/ver/651/trunk/test/fixtures/decks.yml
+END
+cards.yml
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/!svn/ver/651/trunk/test/fixtures/cards.yml
+END
+study_sessions.yml
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/!svn/ver/182/trunk/test/fixtures/study_sessions.yml
+END
+study_modes.yml
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/!svn/ver/182/trunk/test/fixtures/study_modes.yml
+END
+upload_cards_utf8.csv
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/!svn/ver/659/trunk/test/fixtures/upload_cards_utf8.csv
+END
+users.yml
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/!svn/ver/657/trunk/test/fixtures/users.yml
+END
+upload_cards_simple.csv
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/659/trunk/test/fixtures/upload_cards_simple.csv
+END
+activities.yml
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/!svn/ver/189/trunk/test/fixtures/activities.yml
+END
+messages.yml
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/!svn/ver/345/trunk/test/fixtures/messages.yml
+END
+subscriptions.yml
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/!svn/ver/657/trunk/test/fixtures/subscriptions.yml
+END
+ruminations.yml
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/!svn/ver/4/trunk/test/fixtures/ruminations.yml
+END
+permissions.yml
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/!svn/ver/657/trunk/test/fixtures/permissions.yml
+END
+upload_cards_quoated.csv
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/!svn/ver/659/trunk/test/fixtures/upload_cards_quoated.csv
+END
+curriculums.yml
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/!svn/ver/658/trunk/test/fixtures/curriculums.yml
+END

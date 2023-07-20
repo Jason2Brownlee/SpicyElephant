@@ -1,0 +1,14 @@
+<div id="submit_buttons" class="submit_buttons" align="center">
+        	<% button_count = 0 %>
+            <% for result in @possible_results %>
+			<%= form_tag %>
+			<% button_count = button_count + 1 %>
+			<%= submit_to_remote(result.name,  "#{result.name} (#{button_count})",
+							:url => ajax_train_result_path(:study_session => @study_session, :deck => @deck, :card => @cards.instance_of?(Card) && @cards || @cards.first , :result=>result),
+							:id => result.name, 
+							:method => :put,
+							:html => { :id => "#{result.name}" },
+							:loading => "flashResponse('<span>#{result.name}</span>')" ) %>
+			</form>
+            <% end %>
+</div>

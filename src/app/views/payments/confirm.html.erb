@@ -1,0 +1,25 @@
+<% title ('Subscription Payment Confirmation') %>
+<h3><span>
+Subscription Payment Confirmation
+</span></h3>
+<br class="clear" />
+
+<style type="text/css">
+<!--
+p { display: block; margin-bottom: 10px;}
+-->
+</style>
+
+
+<h5>Please Confirm Your Payment Details</h5>
+<br>
+<p>
+		Account (<%= current_user.login %>) will be upgraded to a premium account.
+</p>
+<p>
+		US <b id="total-price">$20.00</b> will be charged to your choosen payment method
+</p>
+<br>
+<% form_tag :action => 'complete', :token => params[:token], :payer_id => params[:PayerID] do %>
+  <%= submit_tag 'Complete Payment' %>
+<% end %>

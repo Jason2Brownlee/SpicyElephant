@@ -1,0 +1,74 @@
+<% title ('Upgrade Account') %>
+<br class="clear" />
+
+<style type="text/css">
+<!--
+#upgrade { width: 100%; border: 2px solid #CBDCED; clear: both; float: left; margin-bottom: 20px; }
+#upgradewrap { padding: 20px 50px; }
+#upgrade h2 { font-size: 1.95em; font-weight: normal; text-align: center; margin: 1em 0 1.1em 0; background-color: #FEFCC1;}
+#upgrade h2 img { vertical-align: middle; width: 50px; height: 50px; border: 1px solid #c0c0c0; margin-right: 12px; }
+#upgrade .cols { width: 100%; float: left; }
+#upgrade .col1 { width: 58%; float: left; }
+#upgrade .col2 { width: 42%; float: left; padding-top: 10px; }
+#upgrade .intro { margin-top: 0 !important; font-size: 1.3em !important; padding-bottom: 3px; }
+#upgrade ul.feat { list-style: none; margin: 0 !important; padding: 0 !important; margin-left: 10px !important; }
+#upgrade ul.feat li { font-size: 1.3em; padding-bottom: 1.2em; line-height: 1.2em; background-image: url('/images/trustyol-check-blue.png'); background-repeat: no-repeat; background-position: top left; padding-left: 30px; }
+#upgrade-btn table { border-collapse: collapse; border-spacing: 0px; }
+#upgrade-btn .left { background-image: url(''); background-repeat: no-repeat; width: 9px; height: 60px; cursor: pointer; }
+#upgrade-btn .middle { font-size: 1.8em; background-image: url(''); background-repeat: repeat-x; height: 60px; padding: 0px 45px; cursor: pointer; white-space: nowrap; }
+#upgrade-btn .link { color: #fff; font-weight: bold; font-size: 1.9em; }
+#upgrade-btn .support { text-align: center; padding-top: 5px; font-size: 1.2em; }
+#upgrade-btn .right { background-image: url(''); background-repeat: no-repeat; width: 9px; height: 60px; cursor: pointer; }
+#upgrade-btn a:link { color: #fff; text-decoration: none; }
+#upgrade-btn a:visited { color: #fff; text-decoration: none; }
+#upgrade-btn a:active { color: #fff; text-decoration: none; }
+#upgrade-btn a:hover { color: #fff; text-decoration: none; }
+#upgrade .newfeat { padding: 5px 0 18px 0; }
+#upgrade .note { padding: 30px 0 18px 0; color: #666; font-size: 0.95em; }
+#upgrade .new { color: #EA5200; }
+p { display: block; margin-bottom: 10px;}
+-->
+</style>
+
+
+<div id="upgrade">
+<div id="upgradewrap">
+
+<h2>Just <b>$20</b> for a lifetime Premium Account.</h2>
+
+<div class="cols">
+
+  <div class="col1">
+
+    <p class="intro">What does a Premium account give me?</p>
+    <ul class="feat">
+    <li><b>Ad Free</b> study</li>
+    <li>Create <b>private</b> study decks</li>
+	<li>Train on an <b>unlimited</b> number of decks <small style="font-size:12px;">(free limit is 5)</small></li>
+    <li><b>On going support for Spicy Elephant</b><br/> so we can continue to improve the service</li>
+    </ul>
+
+  </div> <!-- /col1 -->
+
+  <div class="col2">
+    <div id="upgrade-btn">
+       <table>
+
+       <tr id="upgrade-btn-link">
+         <td class="left"></td>
+         <td class="middle link"><%= button_to "Upgrade Now!", 'payments', :style => "width:170px;height:60px;font-size: 0.9em;" %></td>
+         <td class="right"></td>
+       </tr>
+
+       </table>
+    </div> <!-- /upgrade-btn -->
+
+  </div> <!-- /col2 -->
+
+</div> <!-- /cols -->
+
+</div> <!-- /upgradewrap -->
+</div> <!-- /upgrade -->
+
+
+&nbsp;

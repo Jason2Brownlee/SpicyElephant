@@ -1,0 +1,28 @@
+<h1>Listing subscriptions</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Start subscription at</th>
+    <th>End subscription at</th>
+    <th>Transcation</th>
+    <th>Created at</th>
+  </tr>
+
+<% for subscription in @subscriptions %>
+  <tr>
+    <td><%=h subscription.user %></td>
+    <td><%=h subscription.start_subscription_at %></td>
+    <td><%=h subscription.end_subscription_at %></td>
+    <td><%=h subscription.transcation %></td>
+    <td><%=h subscription.created_at %></td>
+    <td><%= link_to 'Show', subscription %></td>
+    <td><%= link_to 'Edit', edit_subscription_path(subscription) %></td>
+    <td><%= link_to 'Destroy', subscription, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New subscription', new_subscription_path %>

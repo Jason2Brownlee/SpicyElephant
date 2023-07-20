@@ -1,0 +1,24 @@
+<%
+# Expected parameters:
+# => study_mode : a study mode
+	
+%>
+<!--
+<p class="intro_text">
+<% if !@study_mode.is_review? %>
+	You have some decks that have scheduled cards for review.
+<% else %>
+	Review the decks in your curriculum.
+<% end %>
+</p>
+-->
+
+<table class="deck_list" cellpadding="0" cellspacing="0" width="100%">
+  <tr class="deck_headings">
+    <th class="heading_title" width="*" align="left">Deck</th>
+    <th class="heading_scheduled" align="left" width="200px">Scheduled cards</th>
+    <th class="heading_retention" align="left" width="100px">Retention</th>
+  </tr>
+	<%= render :partial => current_user.curriculum_decks, :locals=>{:is_train=>true} %>
+</table>
+

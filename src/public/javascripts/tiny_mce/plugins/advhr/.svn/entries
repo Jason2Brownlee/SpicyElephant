@@ -1,0 +1,73 @@
+8
+
+dir
+740
+http://svn.spicyelephant.com/trunk/public/javascripts/tiny_mce/plugins/advhr
+http://svn.spicyelephant.com
+
+
+
+2008-11-22T01:04:38.909613Z
+734
+craig
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+b44e13de-d91c-40e6-bcb6-fc5b3c2c1b1a
+
+editor_plugin.js
+file
+
+
+
+
+2009-01-11T03:26:17.000000Z
+713492f5963523fcc075d873cccfdacf
+2008-11-22T01:04:38.909613Z
+734
+craig
+
+langs
+dir
+
+editor_plugin_src.js
+file
+
+
+
+
+2009-01-11T03:26:17.000000Z
+e5186f9f8b771c729e10a70b6bc1edc3
+2008-11-22T01:04:38.909613Z
+734
+craig
+
+css
+dir
+
+js
+dir
+
+rule.htm
+file
+
+
+
+
+2009-01-11T03:26:17.000000Z
+a3c41446ab8cd1bce1cd2ed9e2b0eb8b
+2008-11-22T01:04:38.909613Z
+734
+craig
+

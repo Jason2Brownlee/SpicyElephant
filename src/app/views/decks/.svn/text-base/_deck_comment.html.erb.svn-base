@@ -1,0 +1,11 @@
+<div class="comment">
+  
+	<%= avatar_tag(message.user, :size => 30, :default => 'identicon') %>
+	<div class="user_info">
+	<%=  message.message %>
+	<strong style="font-size:.8em; background:#f6f6f6; padding:4px; display:block; margin-bottom:10px;">posted by 
+		<%= user_link(message.user) %>
+		<%=  time_distance_or_time_stamp(message.created_at) %>
+	</strong>
+	</div>
+</div>

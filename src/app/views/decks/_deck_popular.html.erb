@@ -1,0 +1,25 @@
+<div class="activity">
+	<%= avatar_tag(deck.user, :size => 20, :default => 'identicon') %>
+	<%= link_to deck.name, deck %>:
+	<%=  snippet(strip_tags(deck.description), 15) %>
+	<br/>
+	  <small style="font-size:12px;">
+		<%= deck.cards.count() %> cards,
+		created by <%= deck_author_link(deck) %>, 
+		studied by <%= deck_users_link(deck) %>
+      </small>
+	<span class="actions">
+		<% if deck.is_public? %>
+			<% if logged_in? %>
+				<% if Curriculum.deck_in_user_curriculum?(current_user, deck) %>
+					<%= train_on_deck_link(deck) %>
+				<% elsif current_user.can_add_to_curriculum? %>
+					<%= add_to_curriculum_link(deck) %>
+					<%= train_on_deck_link(deck) %>
+				<% end %>
+			<% else %>
+				<%= train_on_deck_link(deck) %>
+			<% end %>
+		<% end %>
+	</span>
+</div>

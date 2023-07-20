@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/527/trunk/vendor/plugins/ext_scaffold/generators/ext_scaffold
+END
+USAGE
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/527/trunk/vendor/plugins/ext_scaffold/generators/ext_scaffold/USAGE
+END
+ext_scaffold_generator.rb
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/!svn/ver/527/trunk/vendor/plugins/ext_scaffold/generators/ext_scaffold/ext_scaffold_generator.rb
+END

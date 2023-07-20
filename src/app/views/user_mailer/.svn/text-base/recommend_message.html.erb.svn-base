@@ -1,0 +1,24 @@
+Hello <%=h @name %>,
+
+Your friend <%=h @sender.login %> (<%=h @sender.email %>) has recommended a study
+deck to you from the memory improvement and study website http://<%=h SITE_URL %>
+
+<%=h @sender.login %> says: <%=h @message %>
+
+The recommended deck is called <%=h @deck.name %>, and is described as:
+<%= strip_tags @deck.description %>
+
+Visit this url to view 	the recommended deck:
+
+  http://<%=h "#{SITE_URL}#{deck_path(@deck)}" %>
+  
+-----------------------------------------------------------------------
+
+Please don't hesitate to contact support@spicyelephant.com if you have any questions.
+
+Best regards,
+
+The Spicy Elephant Team
+
+
+  

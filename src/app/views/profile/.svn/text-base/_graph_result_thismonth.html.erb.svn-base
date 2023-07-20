@@ -1,0 +1,54 @@
+<%
+# Expected: user
+
+name = "Recent and Current Ruminations"
+	
+
+results1 = ""
+results2 = ""
+labels = ""
+
+today = Time.zone.today
+# this month
+#s_date = today.to_time.beginning_of_month.to_date
+#e_date = today.to_time.end_of_month.to_date
+
+# current/recent
+s_date = today - 20
+e_date = today + 10
+
+i = 0
+max_value = 10
+
+while s_date <= e_date
+	results1 += "," if i != 0
+	results2 += "," if i != 0
+	labels += "|" if i != 0
+	
+	if s_date <=  today
+		rs  = user.ruminations.count(:conditions => ["date(ruminations.created_at)=date(?)", s_date])
+		results1 += rs.to_s
+		max_value = rs.to_i if (rs.to_i > max_value)
+	else
+		results1 += "0"
+	end
+	
+	if s_date >= today
+		rs = SupermemoState.count_review_user_on_or_between_dates(user, nil, s_date)
+		results2 += rs.to_s
+		max_value = rs.to_i if (rs.to_i > max_value)
+	else
+		results2 += "0"
+	end
+
+	labels += s_date.strftime("%d")
+	s_date += 1.day
+	i += 1
+end
+
+results = "#{results1}|#{results2}"
+
+%>
+
+<%= render :partial => "train/graph_bar", 
+:locals => {:name=>name,:max_value=>max_value,:colors=>"4d89f9,edb622",:results=>results,:labels=>labels,:width=>700,:height=>150,:col_width=>15,:ledgend=>"Studied|Scheduled"} %>

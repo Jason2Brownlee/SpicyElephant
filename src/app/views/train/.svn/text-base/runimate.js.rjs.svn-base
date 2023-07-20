@@ -1,0 +1,18 @@
+card = @cards.first
+
+page.call 'resetCard'
+page["question_text"].replace_html card.question
+page["answer_text"].replace_html card.answer
+page["question_text"].visual_effect :appear
+
+page["deck_name"].replace_html card.deck.name
+
+page["cards_remaining_count"].replace_html count_cards(@cards_remaining)
+
+page["buttons_panel"].replace_html :partial => 'ruminate_buttons'
+
+if ENV['RAILS_ENV'] != 'development'
+  page.call 'pageTracker._trackPageview', "ajax_ruminate-deck[#{card.deck.id}]-card[#{card.id}]"
+end
+
+                            

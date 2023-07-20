@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/!svn/ver/484/trunk/app/views/subscriptions
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/!svn/ver/484/trunk/app/views/subscriptions/index.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/484/trunk/app/views/subscriptions/show.html.erb
+END

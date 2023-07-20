@@ -1,0 +1,9 @@
+<% title 'Edit Deck' %>
+<h3><span>Edit Deck</span></h3>
+
+<%= render :partial => "common/uni_form_includes" %> 
+<% form_for @deck, :html => {:class => "uniForm"} do |f| %>
+  <%= f.error_messages %>
+  <%= render :partial => f, :locals =>{:f => f, :edit_mode => true} %>
+  <%= f.submit "Update" %> or <%= link_to 'Cancel', request.env['HTTP_REFERER'] %>
+<% end %>

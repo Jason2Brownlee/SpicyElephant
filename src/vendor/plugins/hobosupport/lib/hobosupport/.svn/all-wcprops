@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/!svn/ver/4/trunk/vendor/plugins/hobosupport/lib/hobosupport
+END
+array.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/4/trunk/vendor/plugins/hobosupport/lib/hobosupport/array.rb
+END
+fixes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/4/trunk/vendor/plugins/hobosupport/lib/hobosupport/fixes.rb
+END
+enumerable.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/4/trunk/vendor/plugins/hobosupport/lib/hobosupport/enumerable.rb
+END
+methodphitamine.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/4/trunk/vendor/plugins/hobosupport/lib/hobosupport/methodphitamine.rb
+END
+blankslate.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/4/trunk/vendor/plugins/hobosupport/lib/hobosupport/blankslate.rb
+END
+implies.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/4/trunk/vendor/plugins/hobosupport/lib/hobosupport/implies.rb
+END
+hash.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/4/trunk/vendor/plugins/hobosupport/lib/hobosupport/hash.rb
+END
+metaid.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/4/trunk/vendor/plugins/hobosupport/lib/hobosupport/metaid.rb
+END
+module.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/4/trunk/vendor/plugins/hobosupport/lib/hobosupport/module.rb
+END
+methodcall.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/4/trunk/vendor/plugins/hobosupport/lib/hobosupport/methodcall.rb
+END

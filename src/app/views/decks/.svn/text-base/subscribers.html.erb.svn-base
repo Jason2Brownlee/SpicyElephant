@@ -1,0 +1,25 @@
+<% title "deck users" %>
+
+<h3><span>Users studying <%= @deck.name %></span></h3>
+
+<p>
+	<%= link_to "Back to deck", @deck %>
+</p>
+<br/>
+
+<% if @users.empty? %>
+	<p>
+		No users are studying this deck.
+	</p>
+<% else %>
+
+		<% for user in @users %>
+
+					<%= render :partial => "deck_users", :locals =>{:user => user, :deck => @deck} %>
+
+		<% end%>
+<% end %>
+
+<div class="apple_pagination">
+	<%= will_paginate @users, :container => false %>
+</div>

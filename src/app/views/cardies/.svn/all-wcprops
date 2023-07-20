@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/!svn/ver/527/trunk/app/views/cardies
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/!svn/ver/527/trunk/app/views/cardies/edit.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/!svn/ver/527/trunk/app/views/cardies/index.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/!svn/ver/527/trunk/app/views/cardies/new.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/!svn/ver/527/trunk/app/views/cardies/show.html.erb
+END
+_form_items.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/!svn/ver/527/trunk/app/views/cardies/_form_items.html.erb
+END

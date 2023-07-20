@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/!svn/ver/513/trunk/app/views/user_mailer
+END
+scheduled_notification.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/428/trunk/app/views/user_mailer/scheduled_notification.html.erb
+END
+signup_notification.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/422/trunk/app/views/user_mailer/signup_notification.html.erb
+END
+recommend_message.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/513/trunk/app/views/user_mailer/recommend_message.html.erb
+END
+activation.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/422/trunk/app/views/user_mailer/activation.html.erb
+END
+forgot_password.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/422/trunk/app/views/user_mailer/forgot_password.html.erb
+END
+reset_password.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/422/trunk/app/views/user_mailer/reset_password.html.erb
+END

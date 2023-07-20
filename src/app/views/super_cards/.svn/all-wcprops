@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/!svn/ver/527/trunk/app/views/super_cards
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/!svn/ver/527/trunk/app/views/super_cards/edit.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/!svn/ver/527/trunk/app/views/super_cards/index.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/!svn/ver/527/trunk/app/views/super_cards/new.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/!svn/ver/527/trunk/app/views/super_cards/show.html.erb
+END
+_form_items.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/527/trunk/app/views/super_cards/_form_items.html.erb
+END

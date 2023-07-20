@@ -1,0 +1,25 @@
+<%
+	# Expected: user
+	
+	# Optional:
+	deck = nil if local_assigns[:deck].nil?
+        graph_width = 79
+        retention = graph_width.to_f * (user.retention_percentage(deck).round.to_f / 100)
+        
+
+%>
+<% if retention > 0 %>
+  <div class="retention_wrapper">
+    <div class="retention_level" style="width:<%= retention %>px;" > </div>
+  <span class="retention_value">
+    <%= user.retention_percentage(deck).round %>% retention
+  </span>
+  </div>
+
+<% else %>
+  <div class="retention_wrapper">
+    <div class="retention_level" style="width=<%= retention %>px;" > </div>
+  <span class="retention_value">not studied yet</span>
+  </div>
+
+<% end %>

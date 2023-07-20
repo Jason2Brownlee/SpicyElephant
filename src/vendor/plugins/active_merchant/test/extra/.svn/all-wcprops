@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/470/trunk/vendor/plugins/active_merchant/test/extra
+END
+breakpoint.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/470/trunk/vendor/plugins/active_merchant/test/extra/breakpoint.rb
+END
+binding_of_caller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/470/trunk/vendor/plugins/active_merchant/test/extra/binding_of_caller.rb
+END

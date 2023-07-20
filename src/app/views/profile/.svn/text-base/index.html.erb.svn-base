@@ -1,0 +1,88 @@
+<% title "#{@user.login}'s Profile" %>
+<% if @view_self %>
+<!--
+<p class="intro_text">
+    Your profile allows you to manage the decks you are currently studying and create new decks. 
+</p>
+-->
+<% end %>
+<!--
+<% if @user.total_cards>0 %>
+<br/>
+<h3>
+  <% if @view_self %>
+    Manage Your Decks
+  <% else %>
+    <%= @user.login %>'s profile
+  <% end %>
+</h3>
+
+<% end %>
+
+<h3><span><% if @view_self %>
+        Decks you're studying<% else %>
+        Decks <%= @user.login %> is studying<% end %>
+    </span></h3>
+<p class="intro_text">
+    <% if @view_self %>
+    You are <% else %>
+    <em><%= @user.login %></em>
+    is <% end %>
+    currently studying <em><%= @user.curriculum_decks.count() %></em>
+    decks, with <em><%= @user.total_cards %></em>
+    cards.<% if @view_self and !@user.can_add_to_curriculum? %>
+    <span style="color:gold;">
+        <br/>
+        You have reached the limit of 5 decks, 
+        to add more get a <%= link_to 'premium account now!', upgrade_path %>
+    </span>
+    <% end %>
+</p>
+<% if @view_self && @user.curriculums.count() == 0 %>
+<p class="intro_text">
+    <%= link_to "Explore", decks_path %>for decks to add to your curriculum, or
+    create decks below.
+</p>
+<% end %>
+<% if @user.curriculum_decks.count() > 0 %>
+<table class="deck_list" cellpadding="0" cellspacing="0" width="100%">
+    <% # render :partial => @user.curriculum_decks, :locals =>{:is_profile => true, :user_profile => @user} %>
+</table>
+<% end %>
+<br/>
+-->
+<div class="section">
+<h3>
+  <% if @view_self %>
+    Decks you've made<% else %>
+    Decks <%= @user.login %> has made
+  <% end %>
+</h3>
+<p class="intro_text">
+    <% if @view_self %>
+    You have<% else %>
+    <em><%= @user.login %></em>
+    has<% end %>
+    created <em><%= @user.authored_decks.count() %></em>
+    decks (<%=@user.authored_cards.count() %> cards), and a total of <em><%= Curriculum.count_sum_popularity(@user) %></em>
+    users are studying these decks.
+</p>
+
+<% if @view_self %>
+<div class="deck_button">
+  <div class="button">
+    <div class="left"><div class="top"> </div></div>
+      <%= link_to "Make new deck", new_deck_path, :class => 'button_content' %>
+    <div class="right"><div class="top"> </div></div>
+  </div>
+</div>
+<br class="clear" />
+<% end %>
+<br/>
+<table class="deck_list" cellpadding="0" cellspacing="0" width="100%">
+    <%= render :partial => @user.authored_decks, :locals =>{:is_authored => true, :user_profile => @user, :is_profile => true } %>
+</table>
+<p class="intro_text" align="right">
+    <%= link_to "view all activity", user_activities_path(@user) %>
+</p>
+</div>

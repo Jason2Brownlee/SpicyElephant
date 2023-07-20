@@ -1,0 +1,55 @@
+8
+
+dir
+740
+http://svn.spicyelephant.com/trunk/vendor/plugins/hobofields/rails_generators/hobofield_model
+http://svn.spicyelephant.com
+
+
+
+2008-07-08T12:05:53.181599Z
+1
+root
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+b44e13de-d91c-40e6-bcb6-fc5b3c2c1b1a
+
+hobofield_model_generator.rb
+file
+
+
+
+
+2008-09-22T01:44:45.000000Z
+99c1f82c3f5b1a9d258bdf86e637dc5b
+2008-07-08T12:05:53.181599Z
+1
+root
+
+USAGE
+file
+
+
+
+
+2008-09-22T01:44:45.000000Z
+0f831a20ed6e74f83cd4530be0797d59
+2008-07-08T12:05:53.181599Z
+1
+root
+
+templates
+dir
+

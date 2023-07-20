@@ -1,0 +1,21 @@
+
+<% title (@card.deck.name + ' : Add Card') %>
+<h3><span><%= @card.deck.name %> : Add Card</span></h3>
+<p class="intro_text">
+	Try breaking your information into the simplest question and answer combinations possible.
+	<br/>
+	Also try closed deletions, for example: <i>Mt Everest is (...)  ft in height.</i>
+</p>
+
+
+  <% form_for([@card.deck, @card]) do |f| %>
+    <%= f.error_messages %>
+    <%= render :partial => f, :locals =>{:f => f} %>
+
+    <p>
+      <%= f.submit "Add Card" %> 
+      or 
+      <%= link_to 'Back to Deck', @card.deck %>
+    </p>
+  <% end %>
+<br/>

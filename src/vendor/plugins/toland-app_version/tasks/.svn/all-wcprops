@@ -1,0 +1,11 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/!svn/ver/45/trunk/vendor/plugins/toland-app_version/tasks
+END
+app_version_tasks.rake
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/45/trunk/vendor/plugins/toland-app_version/tasks/app_version_tasks.rake
+END

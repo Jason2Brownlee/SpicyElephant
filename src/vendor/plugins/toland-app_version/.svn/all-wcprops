@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/!svn/ver/45/trunk/vendor/plugins/toland-app_version
+END
+Rakefile
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/45/trunk/vendor/plugins/toland-app_version/Rakefile
+END
+init.rb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/!svn/ver/45/trunk/vendor/plugins/toland-app_version/init.rb
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/!svn/ver/45/trunk/vendor/plugins/toland-app_version/README
+END

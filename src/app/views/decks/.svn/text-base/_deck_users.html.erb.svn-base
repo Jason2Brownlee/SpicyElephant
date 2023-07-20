@@ -1,0 +1,39 @@
+<%
+# Expected: user, deck
+# Optional:
+  deck = nil if local_assigns[:deck].nil?
+        graph_width = 79
+        retention = graph_width.to_f * (user.retention_percentage(deck).round.to_f / 100)
+      
+%>
+<div class="user">
+	<%= avatar_tag(user, :size => 30, :default => 'identicon') %>
+<div class="user_info">
+	<strong><%= user_link(user) %></strong>
+<br />
+    <% if user.retention_percentage(deck).round > 0 %>
+  <div class="retention_wrapper">
+    <div class="retention_level" style="width:<%= retention %>px;" > </div>
+  <span class="retention_value">
+    <%= user.retention_percentage(deck).round %>%
+  </span>
+  </div>
+
+<% else %>
+  <div class="retention_wrapper">
+    <div class="retention_level" style="width=<%= retention %>px;" > </div>
+<span class="retention_value">
+    <%= user.retention_percentage(deck).round %>%
+  </span>
+  </div>
+
+<% end %>
+<p class="intro_text">
+last studied
+	<% date_studied = user.date_last_studied(deck) %>
+	<em><%= (date_studied.nil?) ? "Never" : time_distance_or_time_stamp(date_studied) %></em>
+	</p>
+</div>
+</div>
+
+
